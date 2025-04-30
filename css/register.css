@@ -3,21 +3,22 @@
     --light-green-color: #249300;
     --grey-color: #7b7b7b;
     --light-grey-color: #9d9d9d;
-    --red-color: #E12237;  
-  }
+    --red-color: #E12237;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Helvetica';
 }
- 
-html
-{
+
+html {
     scroll-behavior: smooth;
 }
-body{
-    
+
+body {
+
     background-color: #F6F6F6;
 }
 
@@ -31,7 +32,7 @@ body{
     gap: 1.5rem;
     padding: 0.5rem 5%;
     background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -42,6 +43,7 @@ body{
     color: white;
     font-weight: bold;
 }
+
 .logo img {
     width: auto;
     height: 40px;
@@ -49,6 +51,7 @@ body{
     object-position: center;
     margin: 0px 0px 0px 0px;
 }
+
 .nav-links {
     display: flex;
     gap: 2rem;
@@ -59,6 +62,7 @@ body{
     color: var(--grey-color);
     font-size: 0.9rem;
 }
+
 .tabs a {
     text-decoration: none;
     color: var(--grey-color);
@@ -69,7 +73,8 @@ body{
     border-left: 1px solid var(--grey-color);
     margin-left: 20vw;
     height: 2rem;
-  }
+}
+
 .login-btn {
     border: none;
     background: none;
@@ -79,62 +84,67 @@ body{
 }
 
 /* login */
-.container{
-    margin: 0 auto;
-    padding: 15vh 0;
-}
-.maxs{
+.maxs {
     max-width: 1200px;
 }
-.title-login{
-   font-size: 32pt; 
-   padding: 1rem;
+
+.title-login {
+    font-size: 32pt;
+    padding: 1rem;
 }
-.partner{
-    margin-left: -1.5vw;
+
+.partner {
+    font-size: 32pt;
+    padding-left: 1rem;
+    padding-right: 1rem;
     color: var(--green-color);
 }
-.desc{
-    line-height: 1.5rem;
-    padding-bottom: 2rem;
+
+.desc {
+    /*line-height: 1.5rem;*/
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
-.forms {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
+
+
 .form-section {
     border-radius: 10px;
-    padding: 20px;
-    width: 40vw;
+    /*padding: 20px;*/
+    /*width: 40vw;*/
 }
+
 .form-section h2 {
     font-size: 18px;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
-.form-group-1{
+
+.form-group-1 {
     display: flex;
-    gap:10px;
-    width: 50vw;
+    gap: 10px;
+    /*width: 50vw;*/
 }
-.form-group-2{
+
+.form-group-2 {
     display: flex;
     padding: 1rem;
     margin-bottom: auto;
-    gap:10px;
-    width: 40vw;
+    gap: 10px;
+    /*width: 40vw;*/
     font-size: 10.3pt;
     text-align: center;
     align-items: center;
 }
+
 .form-group {
     margin-bottom: 15px;
 }
+
 .form-group label {
     display: block;
     font-size: 10.3pt;
     margin-bottom: 5px;
 }
+
 .form-group input {
     width: 40vw;
     padding: 8px;
@@ -142,40 +152,48 @@ body{
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-.branch{
+
+.branch {
     padding-top: 2rem;
 }
+
 .form-group select {
-    width: 40vw;
+    /*width: 40vw;*/
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .form-group-1 input {
-    width: 19.6vw;
+    /*width: 19.6vw;*/
     padding: 8px;
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .form-group-inline {
     display: flex;
     gap: 10px;
 }
+
 .form-group-inline input {
-    width: 10vw;
+    /*width: 10vw;*/
 }
+
 .form-group-inline input.long {
-    width: 12.8vw;
+    /*width: 12.8vw;*/
 }
-.captcha input{
+
+.captcha input {
     margin: 3rem 0;
     text-align: center;
     align-items: center;
     padding: 1.5rem;
 }
-.submit-form{
+
+.submit-form {
     background-color: var(--green-color);
     color: white;
     padding: 10px 20px;
@@ -184,19 +202,18 @@ body{
     cursor: pointer;
     font-size: 14px;
     margin-top: 1rem;
-    width: 10vw;
+    /*width: 10vw;*/
     align-items: center;
     text-align: center;
-    margin-left: 15vw;
+    /*margin-left: 15vw;*/
 }
+
 .benefits-container {
-    width: 42vw;
-    height: 110vh;
-    margin-top: 30vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
+
 .benefit {
     background-color: #fff;
     padding: 20px;
@@ -206,17 +223,18 @@ body{
     margin: 10px;
     overflow: hidden;
 }
+
 .benefit img {
     width: 150px;
     height: 150px;
     color: var(--green-color);
     margin-bottom: 10px;
 }
+
 .benefit h3 {
     color: var(--green-color);
     margin-bottom: 10px;
 }
-
 
 
 /* chat */
@@ -233,27 +251,24 @@ body{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* quick links */
+
 .footer {
     background-color: #fff;
-    padding: 40px 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 100%;
-    position: relative;
+    padding: 40px;
+    /*display: flex;*/
+    /*justify-content: space-between;*/
+    /*flex-wrap: wrap;*/
+    /*width: 100%;*/
+    /*position: relative;*/
 }
 
-.footer-col {
-    flex: 1 1 200px;
-    margin: 10px;
-}
 
 .img-footer {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 
 .subscribe-container {
@@ -305,17 +320,19 @@ body{
 }
 
 .horizontal-line {
-    border-top: 1px solid #ccc;
-    width: 205%; /* Spans across both columns */
-    margin: 20px 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 1rem 0;
 }
+
 
 .footer-social {
     display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 60px;
-    right: 20px;
+    /*align-items: center;*/
+    /*position: absolute;*/
+    /*bottom: 60px;*/
+    /*right: 20px;*/
 }
 
 .footer-social a {

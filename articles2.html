@@ -8,22 +8,56 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="css/articles2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 <!-- navbar -->
-<nav class="navbar">
-    <div class="logo"><img src="assets\images\navbar\logo-perusahaan.png" alt=""></div>
-    <div class="nav-links">
-        <a href="home.html">HOME</a>
-        <a href="about.html">ABOUT</a>
-        <a href="services.html">SERVICES</a>
-        <a href="news.html">NEWS</a>
-        <a href="office.html">OUR OFFICES</a>
-        <a href="careers.html">CAREERS</a>
-        <a href="contact.html">CONTACT US</a>
+<nav class="navbar navbar-expand-lg bg-transparent">
+    <div class="container-fluid px-5">
+        <div class="logo"><img src="assets/images/navbar/logo-perusahaan.png" alt=""></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-2" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link small" aria-current="page" href="home.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link small" href="about.html">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link small" href="services.html">SERVICES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active small" href="news.html">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link small" href="office.html">OUR OFFICES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link small" href="careers.html">CAREERS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link  small" href="contact.html">CONTACT US</a>
+                </li>
+
+            </ul>
+
+            <div class="vl ms-auto px-2"></div>
+
+            <a href="login.html" class="login-btn ">LOGIN</a>
+        </div>
     </div>
-    <div class="vl"></div>
-    <a href="login.html" class="login-btn">LOGIN</a>
 </nav>
 
 <!-- article -->
@@ -33,17 +67,31 @@
         <h2>Krisis Pengiriman Laut Merah: Mimpi Buruk Baru <br> untuk Perdagangan Asia-Eropa</h2>
         <p class="date">05 OCT 2024 | SHIPMENT, LATEST NEWS</p>
         <div class="artic">
-            <p>
-                Para pengirim barang memperingatkan pelanggan bahwa permintaan pada perdagangan laut Asia-Eropa mulai
-                terlihat seperti puncak pandemi, dipicu oleh krisis yang sedang berlangsung di Laut Merah. Situasi ini
-                menciptakan tantangan besar dalam pengiriman barang, dengan tarif yang terus meningkat dan kapasitas
-                yang semakin terbatas. Hal ini diperburuk oleh pengalihan rute kapal untuk menghindari Laut Merah, yang
-                mengakibatkan transit yang lebih lama melalui Tanjung Harapan. Sebagian besar masalah ini juga
-                disebabkan oleh kekurangan kontainer. Harga kontainer terus meningkat karena ketidakpastian terkait
-                situasi Laut Merah dan pengalihan rute melalui Tanjung Harapan.
-            </p>
-            <br>
-            <img src="assets\images\news\texas.jpg" alt="">
+            <div class="row">
+                <div class="col-lg-7">
+                    <p>
+                        Para pengirim barang memperingatkan pelanggan bahwa permintaan pada perdagangan laut Asia-Eropa
+                        mulai
+                        terlihat seperti puncak pandemi, dipicu oleh krisis yang sedang berlangsung di Laut Merah.
+                        Situasi ini
+                        menciptakan tantangan besar dalam pengiriman barang, dengan tarif yang terus meningkat dan
+                        kapasitas
+                        yang semakin terbatas. Hal ini diperburuk oleh pengalihan rute kapal untuk menghindari Laut
+                        Merah, yang
+                        mengakibatkan transit yang lebih lama melalui Tanjung Harapan. Sebagian besar masalah ini juga
+                        disebabkan oleh kekurangan kontainer. Harga kontainer terus meningkat karena ketidakpastian
+                        terkait
+                        situasi Laut Merah dan pengalihan rute melalui Tanjung Harapan.
+                    </p>
+                    <br>
+
+                </div>
+                <div class="col-lg-5">
+                    <img src="assets\images\news\texas.jpg" alt="">
+                </div>
+            </div>
+
+
         </div>
         <div class="pages">
             <a href=""><p class="back">&larr; Read Previous</p></a>
@@ -52,116 +100,157 @@
     </article>
 </div>
 
+<hr>
+
 <!-- news -->
 <p class="news-suggest">You might also like</p>
 <div class="container">
 
-    <!-- news 1 -->
-    <div class="news-card">
-        <img alt="Person holding a tablet" height="200" src="assets\images\news\dompet.png" width="300"/>
-        <div class="news-content">
-            <div class="news-date">
-                10 NOV 2023 | SHIPMENT, LATEST NEWS
-            </div>
-            <div class="news-title">
-                How to Secure Your Products for Shipment
-            </div>
-            <div class="news-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, ipsum eget posuere imperdiet,
-                condimentum gravida mi enim vel sapien.
-            </div>
-            <a class="read-more" href="#">
-                Read More &rarr;
-            </a>
-        </div>
-    </div>
+    <div class="row g-5">
 
-    <!-- news 2 -->
-    <div class="news-card">
-        <img alt="Shipping containers and cranes" height="200" src="assets\images\news\texas.jpg" width="300"/>
-        <div class="news-content">
-            <div class="news-date">
-                10 NOV 2023 | SHIPMENT, LATEST NEWS
+        <div class="col-lg-4 h-item h-display">
+            <!-- news 1 -->
+            <div class="news-card">
+                <img alt="Shipping containers and cranes" height="200"
+                     src="assets\images\news\dompet.png"
+                     width="300"/>
+                <div class="news-content">
+                    <div class="news-date">
+                        10 NOV 2023 | SHIPMENT, LATEST NEWS
+                    </div>
+                    <div class="news-title">
+                        How to Secure Your Products for Shipment
+                    </div>
+                    <div class="news-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, ipsum eget
+                        posuere imperdiet, condimentum gravida mi enim vel sapien.
+                    </div>
+                    <a class="read-more mt-4 justify-content-end" href="articles1.html">
+                        Read More
+                        <i class="fas fa-arrow-right">
+                        </i>
+                    </a>
+                </div>
             </div>
-            <div class="news-title">
-                Krisis Pengiriman Laut Merah: Mimpi Buruk Baru untuk Perdagangan Asia-Eropa
-            </div>
-            <div class="news-description">
-                Para pengirim barang memperingatkan pelanggan bahwa permintaan pada perdagangan laut Asia-Eropa...
-            </div>
-            <a class="read-more" href="#">
-                Read More &rarr;
-            </a>
-        </div>
-    </div>
 
-    <!-- news 3 -->
-    <div class="news-card">
-        <img alt="Shipping containers and cranes" height="200" src="assets\images\news\container.jpg" width="300"/>
-        <div class="news-content">
-            <div class="news-date">
-                05 OCT 2024 | SHIPMENT, LATEST NEWS
+        </div>
+
+        <div class="col-lg-4 h-item h-display">
+            <!-- news 2 -->
+            <div class="news-card">
+                <img alt="Shipping containers and cranes" height="800" src="assets\images\news\truck.jpg"
+                     width="600"/>
+                <div class="news-content">
+                    <div class="news-date">
+                        10 NOV 2023 | SHIPMENT, LATEST NEWS
+                    </div>
+                    <div class="news-title">
+                        New Delivery Fleets Ready for The Road
+                    </div>
+                    <div class="news-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, ipsum eget
+                        posuere imperdiet, condimentum gravida mi enim vel sapien.
+                    </div>
+                    <a class="read-more mt-4  justify-content-end" href="articles2.html">
+                        Read More
+                        <i class="fas fa-arrow-right">
+                        </i>
+                    </a>
+                </div>
             </div>
-            <div class="news-title">
-                Tips Menggunakan Jasa Forwarder dengan Aman, Cepat dan Murah
+        </div>
+        <div class="col-lg-4 h-item h-display">
+            <!-- news 3 -->
+            <div class="news-card">
+                <img alt="Shipping containers and cranes" height="800" src="assets\images\news\container-crane.jpg"
+                     width="600"/>
+                <div class="news-content">
+                    <div class="news-date">
+                        10 NOV 2023 | SHIPMENT, LATEST NEWS
+                    </div>
+                    <div class="news-title">
+                        Customs and Declarations Processes
+                    </div>
+                    <div class="news-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, ipsum eget
+                        posuere imperdiet, condimentum gravida mi enim vel sapien.
+                    </div>
+                    <a class="read-more mt-4  justify-content-end" href="articles2.html">
+                        Read More
+                        <i class="fas fa-arrow-right">
+                        </i>
+                    </a>
+                </div>
             </div>
-            <div class="news-description">
-                Semakin berkembangnya teknologi, semakin banyak pula bisnis jasa pengiriman barang di dunia.
-            </div>
-            <a class="read-more" href="#">
-                Read More &rarr;
-            </a>
         </div>
     </div>
 </div>
+
+<hr class="mt-5">
 
 <!-- quick links -->
 <div class="footer">
-    <div class="footer-col">
-        <div class="img-footer">
-            <img src="assets\images\navbar\logo-perusahaan.png" alt="Logo" height="70px" width="150px">
-        </div>
-        <p>Get the latest news about<br>shipment, cargo and delivery.</p>
-        <div class="subscribe-container">
-            <input type="email" placeholder="Email">
-            <button>Subscribe</button>
-        </div>
-    </div>
+    <div class="row d-flex">
+        <div class="col-lg-4 mb-3">
+            <div class="img-footer">
+                <img src="assets/images/navbar/logo-perusahaan.png" alt="Logo" height="70px" width="150px">
+            </div>
+            <p>Get the latest news about<br>shipment, cargo and delivery.</p>
+            <div class="form-group-inline ">
+                <input type="text" class="form-control" placeholder="Email">
+                <button class="btn btn-success" type="button" id="inputGroupFileAddon04">Subscribe</button>
+            </div>
 
-    <div class="footer-col">
-        <h4>Quick Links</h4>
-        <a href="about.html">About</a>
-        <a href="news.html">News</a>
-        <a href="office.html">Our Offices</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="careers.html">Careers</a>
-        <a href="register.html">New Customer Center</a>
-        <!-- Horizontal Line Below Quick Links -->
-        <hr class="horizontal-line">
-        <!-- Terms and Privacy Policy Links -->
-        <div class="terms">
-            <a href="#">Terms of Service</a>
-            <a href="#">Privacy Policy</a>
         </div>
-    </div>
+        <div class="col-lg">
+            <div class="row d-flex">
+                <div class="col">
+                    <h4>Quick Links</h4>
+                    <a href="about.html">About</a>
+                    <a href="news.html">News</a>
+                    <a href="office.html">Our Offices</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contactister.html">New Customer Center</a>
 
-    <div class="footer-col">
-        <h4>Services</h4>
-        <p>Sea Freight</p>
-        <p>Air Freight</p>
-        <p>Rail Transport</p>
-        <p>Land Transport</p>
-        <p>3PL</p>
-    </div>
+                </div>
+                <div class="col">
+                    <h4>Services</h4>
+                    <p>Sea Freight</p>
+                    <p>Air Freight</p>
+                    <p>Rail Transport</p>
+                    <p>Land Transport</p>
+                    <p>3PL</p>
+                </div>
+            </div>
+            <hr class="horizontal-line">
 
-    <!-- Social Media Icons Positioned Horizontally -->
-    <div class="footer-social">
-        <a href="#"><img src="assets\images\footer\instagram.png" alt="Instagram" height="20px" width="20px"></a>
-        <a href="#"><img src="assets\images\footer\facebook.png" alt="Facebook" height="20px" width="20px"></a>
-        <a href="#"><img src="assets\images\footer\twitterx.png" alt="X" height="16px" width="16px"></a>
-        <a href="#"><img src="assets\images\footer\linkedin.png" alt="LinkedIn" height="20px" width="20px"></a>
-        <a href="#"><img src="assets\images\footer\youtube.png" alt="YouTube" height="15px" width="20px"></a>
+            <div class="col">
+                <div class="row">
+                    <!-- Terms and Privacy Policy Links -->
+                    <div class="terms col">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                    <!-- Social Media Icons Positioned Horizontally -->
+                    <div class="footer-social col">
+                        <a href="#"><img src="assets\images\footer\instagram.png" alt="Instagram" height="20px"
+                                         width="20px"></a>
+                        <a href="#"><img src="assets\images\footer\facebook.png" alt="Facebook" height="20px"
+                                         width="20px"></a>
+                        <a href="#"><img src="assets\images\footer\twitterx.png" alt="X" height="16px" width="16px"></a>
+                        <a href="#"><img src="assets\images\footer\linkedin.png" alt="LinkedIn" height="20px"
+                                         width="20px"></a>
+                        <a href="#"><img src="assets\images\footer\youtube.png" alt="YouTube" height="15px"
+                                         width="20px"></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
     </div>
 </div>
+
 </body>
 </html>
