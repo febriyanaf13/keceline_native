@@ -53,7 +53,7 @@ header nav ul li a {
     align-items: center;
     width: 100%;
     gap: 1.5rem;
-    padding: 0.5rem 5%;
+    /*padding: 0.5rem 5%;*/
     background: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -66,29 +66,85 @@ header nav ul li a {
     color: white;
     font-weight: bold;
 
+
 }
 
 .logo img {
     width: auto;
-    height: 40px;
+    height: 80px;
     object-fit: contain;
     object-position: center;
     margin: 0px 0px 0px 0px;
 }
 
-
-.navbar-nav .nav-link {
-    font-size: 14px; /* ubah sesuai kebutuhan */
-    letter-spacing: 0.5px; /* opsional: bikin huruf lebih renggang */
+.navbar-nav .nav-item {
+    padding: 0 0.5rem;
 
 }
+
+.navbar-nav .nav-link {
+    font-size: 16px; /* ubah sesuai kebutuhan */
+    letter-spacing: 0.5px; /* opsional: bikin huruf lebih renggang */
+    padding: 10px 15px;
+
+}
+
 
 
 .nav-links a, .login-btn {
     text-decoration: none;
     color: var(--grey-color);
-    font-size: 0.9rem;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.nav-tabs .nav-link {
+    color: grey;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    color: black; /* biar gak berubah jadi biru saat dihover */
+}
+.nav-tabs .nav-item {
+    border-right: 1px solid #dee2e6;
+}
+
+/* Agar tampilan lebih rapi, bisa tambahkan padding */
+.nav-tabs .nav-link {
+    padding: 15px 50px;  /* Menambahkan padding vertikal 15px dan horizontal 30px */
+    min-width: 150px;    /* Menetapkan lebar minimum kolom */
+    text-align: center;  /* Memastikan teks berada di tengah */
+
+}
+
+.nav-tabs .nav-item:first-child .nav-link {
+    border-top-left-radius: 20px;
+}
+
+.nav-tabs .nav-link.active {
+    color: green !important;
+    border: none;
+    border-radius: 0;
+
+    border-bottom: 3px solid green !important;
+    /*padding-bottom: 10px;*/
+
+}
+
+.nav-tabs .nav-link.active:hover,
+.nav-tabs .nav-link.active:focus {
+    color: green !important; /* jaga-jaga kalau aktif dan dihover */
+}
+
+
+
+.nav-tabs .nav-link i {
+    color: inherit; /* supaya ikon ikut warna teks */
 }
 
 .tabs a {
@@ -308,7 +364,7 @@ header nav ul li a {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
-    align-items: center;
+    align-items: start;
     /*margin-bottom: 50px;*/
 }
 
@@ -322,12 +378,13 @@ header nav ul li a {
 }
 
 .service-section h3 {
-    font-size: 24px;
+    font-size: clamp(1rem, 1.5vw, 3rem);
+
     /*margin-bottom: 10px;*/
 }
 
 .service-section p {
-    font-size: 16px;
+    font-size: clamp(1rem, 1vw, 3rem);
     /*line-height: 1.6;*/
 }
 
@@ -352,46 +409,61 @@ hr {
     }
 }
 
-/* Background container */
-/* Background container */
-.bl-background {
-    background-image: url('../assets/images/services/awan.png');
+/* banner */
+.banner {
+    background: url('../assets/images/services/awan.png');
     background-size: cover;
-    background-position: center;
-    height: 30vh;
+    color: white;
+    height: auto;
     width: 100%;
-    position: relative;
-    display: flex;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+
+.banner-content {
+    /*max-width: 1200px;*/
+    margin: 0 auto;
+
+}
+
+.banner-content h1 {
+    color: white;
+    justify-items: center;
+    justify-content: center;
     align-items: center;
-    padding: 0 5%; /* Tambahkan padding untuk memberi jarak pada teks kiri */
+    align-content: center;
+    font-size: clamp(2.5rem, 3.5vw, 4vw);
+
 }
 
-/* Text on the left */
-.text {
-    color: #fff;
-    font-size: 24px;
-    max-width: 40%;
-    line-height: 1.4;
-}
 
-/* White container on the right */
-.bl-container {
+.cta-card {
     background-color: #fff;
-    padding: 20px 30px;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-    width: 50vw;
+    /*padding: 20px;*/
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px 0 0 10px;
     color: #000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: absolute; /* Gunakan positioning absolute */
-    top: 50%; /* Center secara vertikal */
-    right: 0%; /* Posisikan di sebelah kanan dengan jarak 5% dari kanan */
-    transform: translateY(-50%); /* Center secara vertikal */
-    font-size: clamp(1rem, 1vw, 2rem);
+    font-size: clamp(1rem, 1vw, 2vw);
 
 }
 
-.bl-container p {
+.cta-card p {
+    color: black;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+
+.button {
+    align-items: right;
+    color: black;
+    text-decoration: none;
+    border-radius: 4px;
 
 }
 
@@ -432,21 +504,19 @@ hr {
 /* Kontainer layanan */
 .services-container {
     display: flex;
-    flex-direction: column;
-    /*grid-template-columns: repeat(3, 1fr); !* 3 kolom sejajar *!*/
-    /*gap: 2rem; !* Jarak antar elemen *!*/
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    padding: 4vh;
+    flex-wrap: wrap; /* Agar item dapat berpindah ke baris berikutnya jika tidak cukup ruang */
+    justify-content: center; /* Menempatkan item di tengah secara horizontal */
+    gap: 1.5rem; /* Memberikan jarak antar item */
+
 }
 
 /* Item layanan */
 .service-item {
     display: flex;
     flex-direction: row; /* Susun gambar dan teks secara horizontal */
-    /*align-items: center; !* Pusatkan gambar dan teks secara vertikal *!*/
+    align-items: center; /* Pusatkan gambar dan teks secara vertikal */
     text-align: left; /* Teks sejajar di sebelah gambar */
+    width: 50;
     gap: 1rem; /* Jarak antara gambar dan teks */
 }
 
@@ -515,20 +585,13 @@ hr {
     transform: scale(1.1); /* Memperbesar sedikit saat dihover */
 }
 
-
-/* Section utama Certification */
-.gr-background-3 {
-    background-color: #f9f9f9;
-    padding: 4vh;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-/* Judul Certification */
-.text-1 {
-    color: #000;
-    margin-bottom: 2rem;
-    font-size: 32px;
+.horizontal-line-3 {
+    /*position: absolute;
+    left: 0; */
+    width: 100%;
+    /*border-top: 0px solid black;*/
+    margin-top: -20px;
+    top: 140px;
 }
 
 /* Garis horizontal */
@@ -539,47 +602,65 @@ hr {
     margin: 1rem 0;
 }
 
-/* Container untuk grid Certification */
-.certification-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 2rem;
-    justify-items: center;
+.wh-box-2 {
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    padding: 4vh;
+    /*position: absolute;
+    top:90%;*/
+    top: auto;
+    /*height: 70vh;*/
     align-items: center;
+
 }
 
-/* Setiap Certification item */
-.certification-item {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 20rem;
-    height: 10rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+.background-2 p{
+    font-size: clamp(60px, 3vw, 70px);
+    color: black;
+    padding-left: 5vh;
+    font-weight: lighter;
 }
 
-/* Gambar dalam Certification */
-.certification-item img {
-    width: 80px;
-    height: auto;
-    margin-bottom: 1rem;
+
+.certifications{
+    background-color: #e8e8e8;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+    grid-template-rows: repeat(2, auto);   /* 3 baris */
+    gap: 50px 70px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+}
+
+.certification-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.certification-card img {
+    width: 150px;
+    height: 150px;
     object-fit: contain;
 }
 
-/* Teks dalam Certification */
-.certification-item p {
-    color: #000;
-    font-size: clamp(14px, 1vw, 1rem);
+.certification-card p {
     margin: 0;
-    font-weight: bold;
-}
-
-/* Efek hover pada Certification item */
-.certification-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    font-size: clamp(40px, 1.7vw, 50px);;
+    font-weight: 500;
 }
 
 /* Gambar latar belakang */
@@ -734,4 +815,9 @@ hr {
 .floating-button i {
     color: white;
     font-size: 24px;
+}
+
+.form-group-inline {
+    display: flex;
+    gap: 10px;
 }

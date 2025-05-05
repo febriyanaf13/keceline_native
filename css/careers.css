@@ -67,7 +67,7 @@ header nav ul li a {
     position: relative;
 }
 
-.container {
+.container-careers {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 3vw;
     text-align: left;
@@ -75,22 +75,25 @@ header nav ul li a {
     border-top-right-radius: 20px;
     color: #fff;
     position: absolute;
-    width: 100%;
+    width: 50%;
+    top: 30%;
+    /*margin-right: 20vw;*/
+    max-width: 70%;
     top: 30%;
 }
 
 
-.container h1 {
-    font-size: clamp(3rem, 5vw, 5rem);
+.container-careers h1 {
+    font-size: clamp(3rem, 4vw, 5rem);
     margin-bottom: 10px;
     text-align: left;
     padding-left: 4vh;
 }
 
-.container p {
+.container-careers p {
     text-align: left;
     padding-left: 4vh;
-    font-size: clamp(1rem, 2vw, 3rem);
+    font-size: clamp(1rem, 1vw, 3rem);
 
 }
 
@@ -106,9 +109,11 @@ header nav ul li a {
     padding: 4vh;
 }
 
-.background-2 {
-    font-size: clamp(50px, 5vw, 70px);
+.background-2 p{
+    font-size: clamp(60px, 3vw, 70px);
     color: black;
+    padding-left: 5vh;
+    font-weight: lighter;
 }
 
 
@@ -116,6 +121,7 @@ header nav ul li a {
     font-size: 3vh;
     text-align: justify;
     color: black;
+    font-weight: lighter;
 }
 
 .wh-box {
@@ -148,7 +154,8 @@ header nav ul li a {
 }
 
 .job{
-    padding: 4vh;
+    padding-left: 10vh;
+
 }
 
 .job-container {
@@ -160,9 +167,10 @@ header nav ul li a {
     gap: 8px; /* Space between job title and job info */
 }
 .job-title {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: clamp(30px, 1vw, 50px);
+    font-weight: normal;
     color: #333;
+
 }
 
 .job-info {
@@ -175,6 +183,7 @@ header nav ul li a {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
+
     color: #555;
 }
 
@@ -215,10 +224,11 @@ header nav ul li a {
 }
 
 .job-title-2 {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: clamp(30px, 1vw, 50px);
+    font-weight: normal;
     margin-top: 1vh;
     color: #333;
+
 }
 
 .job-info-2 {
@@ -293,8 +303,8 @@ header nav ul li a {
 }
 
 .job-title-3 {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: clamp(30px, 1vw, 50px);
+    font-weight: normal;
     margin-top: 1vh;
     color: #333;
 }
@@ -386,10 +396,10 @@ header nav ul li a {
 /* Card styling */
 .benefit-card {
     background-color: #fff;
-    padding: 40px;
+    padding: 50px;
     border-radius: 10px;
-    width: 250px; /* Width of each card */
-    /*height: 350px;*/
+    width: 400px; /* Width of each card */
+    height: 500px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     display: flex;
     flex-direction: column;
@@ -400,22 +410,23 @@ header nav ul li a {
 
 /* Icon styling */
 .benefit-icon {
-    width: 60px;
-    height: 60px;
+    width: 150px;
+    height: 150px;
     margin-bottom: 50px;
 }
 
 /* Title styling */
 .benefit-title {
-    font-size: 18px;
+    font-size: clamp(30px, 1vw, 50px);
     font-weight: bold;
     color: #154203; /* Green color */
     margin: 10px 0;
+
 }
 
 /* Description styling */
 .benefit-description {
-    font-size: 14px;
+    font-size: clamp(20px, 0.5vw, 20px);
     color: #666;
     margin-bottom: 0;
     padding-bottom: 0;

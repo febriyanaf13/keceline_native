@@ -24,9 +24,9 @@ html
     align-items: center;
     width: 100%;
     gap: 1.5rem;
-    padding: 0.5rem 5%;
+    /*padding: 0.5rem 5%;*/
     background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -36,28 +36,88 @@ html
     justify-content: center;
     color: white;
     font-weight: bold;
+
+
 }
+
 .logo img {
     width: auto;
-    height: 40px;
+    height: 80px;
     object-fit: contain;
     object-position: center;
     margin: 0px 0px 0px 0px;
 }
 
+.navbar-nav .nav-item {
+    padding: 0 0.5rem;
+
+}
 
 .navbar-nav .nav-link {
-    font-size: 14px; /* ubah sesuai kebutuhan */
+    font-size: 16px; /* ubah sesuai kebutuhan */
     letter-spacing: 0.5px; /* opsional: bikin huruf lebih renggang */
+    padding: 10px 15px;
 
 }
 
 
-.nav-links a, .login-btn  {
+
+.nav-links a, .login-btn {
     text-decoration: none;
     color: var(--grey-color);
-    font-size: 0.9rem;
+    font-size: 14px;
+    font-weight: bold;
+
 }
+
+.nav-tabs .nav-link {
+    color: grey;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    color: black; /* biar gak berubah jadi biru saat dihover */
+}
+.nav-tabs .nav-item {
+    border-right: 1px solid #dee2e6;
+}
+
+/* Agar tampilan lebih rapi, bisa tambahkan padding */
+.nav-tabs .nav-link {
+    padding: 15px 50px;  /* Menambahkan padding vertikal 15px dan horizontal 30px */
+    min-width: 150px;    /* Menetapkan lebar minimum kolom */
+    text-align: center;  /* Memastikan teks berada di tengah */
+
+}
+
+.nav-tabs .nav-item:first-child .nav-link {
+    border-top-left-radius: 20px;
+}
+
+.nav-tabs .nav-link.active {
+    color: green !important;
+    border: none;
+    border-radius: 0;
+
+    border-bottom: 3px solid green !important;
+    /*padding-bottom: 10px;*/
+
+}
+
+.nav-tabs .nav-link.active:hover,
+.nav-tabs .nav-link.active:focus {
+    color: green !important; /* jaga-jaga kalau aktif dan dihover */
+}
+
+
+
+.nav-tabs .nav-link i {
+    color: inherit; /* supaya ikon ikut warna teks */
+}
+
 .tabs a {
     text-decoration: none;
     color: var(--grey-color);
@@ -66,15 +126,17 @@ html
 
 .vl {
     border-left: 1px solid var(--grey-color);
-    margin-left: 20vw;
+    margin-left: 25vw;
     height: 2rem;
-  }
+}
+
 .login-btn {
     border: none;
     background: none;
     color: var(--grey-color);
     margin-left: 0;
     cursor: pointer;
+    font-weight: 400;
 }
 
 /* news */
@@ -144,6 +206,52 @@ header p {
     padding-left: 1rem;
     padding-top: 1rem;
     padding-right: 1rem;
+}
+
+
+.gr-box {
+    background-color: #f9f9f9;
+    background-size: cover;
+    background-position: center;
+    /*position: absolute;
+    top:90%;*/
+    top: auto;
+    height: auto;
+    width: 100%;
+    padding: 4vh;
+}
+
+.background-2 p{
+    font-size: clamp(60px, 3vw, 70px);
+    color: black;
+    padding-left: 5vh;
+    font-weight: lighter;
+}
+
+.news-text {
+    font-size: clamp(20px, 1vw, 30px);
+    color: black;
+    padding-left: 5vh;
+}
+
+/* Ubah warna teks dan border tombol navigasi */
+.nav-pills .nav-link {
+    color: #008000 !important; /* Hijau untuk teks tombol */
+    background-color: transparent; /* Background transparan untuk tombol default */
+    transition: all 0.3s ease; /* Efek transisi untuk hover */
+}
+
+/* Warna teks tombol ketika aktif */
+.nav-pills .nav-link.active {
+    color: #fff !important; /* Warna teks putih */
+    background-color: #008000 !important; /* Latar belakang hijau */
+    border-color: #008000 !important; /* Border hijau */
+}
+
+/* Hover pada tombol navigasi */
+.nav-pills .nav-link:hover {
+    color: #fff !important; /* Teks putih saat hover */
+    background-color: #006400 !important; /* Hijau tua saat hover */
 }
 
 
@@ -227,12 +335,6 @@ header p {
 
 }
 
-.news-date {
-    font-size: 12px;
-    color: #888;
-    margin-bottom: 10px;
-}
-
 .news-title {
     font-size: 18px;
     font-weight: bold;
@@ -246,7 +348,7 @@ header p {
 
 .read-more {
     font-size: 14px;
-    color: #007bff;
+    color: black;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -303,9 +405,10 @@ header p {
     margin-bottom: 10px;
 }
 .news-date {
-    font-size: 12px;
+    font-size: clamp(15px, 1vw, 30px);
     color: var(--grey-color);
     margin-bottom: 10px;
+    font-weight: lighter;
 }
 .news-content h1 {
     font-size: 18pt;
@@ -313,14 +416,15 @@ header p {
     margin-bottom: 10px;
 }
 .news-title {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: clamp(20px, 1.5vw, 50px);
+
+    font-weight: normal;
     margin-bottom: 10px;
     text-decoration: none;
     color: #000;
 }
 .news-description {
-    font-size: 14px;
+    font-size: clamp(15px, 1vw, 30px);
     color: var(--grey-color);
     margin-bottom: 20px;
 }

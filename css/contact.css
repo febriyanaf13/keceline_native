@@ -5,7 +5,8 @@
     max-width: 100%; /* Batasi lebar agar tidak melampaui kontainer */
     height: 700px;
     width: 100%;
-    border-radius: 8px; /* Tambahkan efek radius */
+    object-fit: cover;
+    border-radius: 50px; /* Tambahkan efek radius */
 }
 
 :root {
@@ -40,7 +41,7 @@ body {
     align-items: center;
     width: 100%;
     gap: 1.5rem;
-    padding: 0.5rem 5%;
+    /*padding: 0.5rem 5%;*/
     background: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -52,28 +53,86 @@ body {
     justify-content: center;
     color: white;
     font-weight: bold;
+
+
 }
 
 .logo img {
     width: auto;
-    height: 40px;
+    height: 80px;
     object-fit: contain;
     object-position: center;
     margin: 0px 0px 0px 0px;
 }
 
-
-.navbar-nav .nav-link {
-    font-size: 14px; /* ubah sesuai kebutuhan */
-    letter-spacing: 0.5px; /* opsional: bikin huruf lebih renggang */
+.navbar-nav .nav-item {
+    padding: 0 0.5rem;
 
 }
+
+.navbar-nav .nav-link {
+    font-size: 16px; /* ubah sesuai kebutuhan */
+    letter-spacing: 0.5px; /* opsional: bikin huruf lebih renggang */
+    padding: 10px 15px;
+
+}
+
 
 
 .nav-links a, .login-btn {
     text-decoration: none;
     color: var(--grey-color);
-    font-size: 0.9rem;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.nav-tabs .nav-link {
+    color: grey;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    color: black; /* biar gak berubah jadi biru saat dihover */
+}
+.nav-tabs .nav-item {
+    border-right: 1px solid #dee2e6;
+}
+
+/* Agar tampilan lebih rapi, bisa tambahkan padding */
+.nav-tabs .nav-link {
+    padding: 15px 50px;  /* Menambahkan padding vertikal 15px dan horizontal 30px */
+    min-width: 150px;    /* Menetapkan lebar minimum kolom */
+    text-align: center;  /* Memastikan teks berada di tengah */
+
+}
+
+.nav-tabs .nav-item:first-child .nav-link {
+    border-top-left-radius: 20px;
+}
+
+.nav-tabs .nav-link.active {
+    color: green !important;
+    border: none;
+    border-radius: 0;
+
+    border-bottom: 3px solid green !important;
+    /*padding-bottom: 10px;*/
+
+}
+
+.nav-tabs .nav-link.active:hover,
+.nav-tabs .nav-link.active:focus {
+    color: green !important; /* jaga-jaga kalau aktif dan dihover */
+}
+
+
+
+.nav-tabs .nav-link i {
+    color: inherit; /* supaya ikon ikut warna teks */
 }
 
 .tabs a {
@@ -84,7 +143,7 @@ body {
 
 .vl {
     border-left: 1px solid var(--grey-color);
-    margin-left: 20vw;
+    margin-left: 25vw;
     height: 2rem;
 }
 
@@ -94,8 +153,27 @@ body {
     color: var(--grey-color);
     margin-left: 0;
     cursor: pointer;
+    font-weight: 400;
 }
 
+.gr-box {
+    background-color: #f9f9f9;
+    background-size: cover;
+    background-position: center;
+    /*position: absolute;
+    top:90%;*/
+    top: auto;
+    height: auto;
+    width: 100%;
+    padding: 4vh;
+}
+
+.background-2 p{
+    font-size: clamp(60px, 3vw, 70px);
+    color: black;
+    padding-left: 5vh;
+    font-weight: lighter;
+}
 /* login */
 .maxs {
     max-width: 1200px;
@@ -166,6 +244,30 @@ body {
     font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+/* Mengatur tinggi semua elemen input */
+form .form-control {
+    height: 50px; /* Atur tinggi sesuai kebutuhan, misalnya 50px */
+    line-height: normal; /* Pastikan teks selalu terlihat rapi */
+}
+
+/* Mengatur tinggi untuk select elemen */
+form .form-select {
+    height: 50px; /* Sesuaikan tinggi elemen select */
+    line-height: normal;
+}
+
+/* Mengatur tinggi untuk textarea jika diperlukan */
+form textarea.form-control {
+    height: auto; /* Biarkan tinggi textarea sesuai dengan jumlah baris */
+}
+
+/* Mengatur tinggi tombol */
+.btn.submit {
+    height: 60px; /* Atur tinggi tombol sesuai kebutuhan, misalnya 60px */
+    line-height: normal; /* Pastikan teks tetap rapi */
+    font-size: 16px; /* Sesuaikan ukuran teks jika diperlukan */
 }
 
 .branch {

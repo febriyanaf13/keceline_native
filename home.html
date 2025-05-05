@@ -19,13 +19,13 @@
 <body>
 
 <nav class="navbar navbar-expand-lg bg-transparent">
-    <div class="container-fluid px-5">
-        <div class="logo"><img src="assets/images/navbar/logo-perusahaan.png" alt=""></div>
+    <div class="container-fluid px-5 py-3">
+        <div class="logo mx-5"><img src="assets/images/navbar/logo-perusahaan.png" alt=""></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse px-2" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse me-5" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active small" aria-current="page" href="home.html">HOME</a>
@@ -89,15 +89,15 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="tab" onclick="switchTab('quote');"><i class="fas fa-quote-left"></i>
-                    Quote</a>
+                    Get a Quote</a>
             </li>
         </ul>
 
         <!-- Tab panes -->
-        <div class="tab-content">
+        <div class="tab-content px-3 py-3">
             <!-- Rates -->
             <div id="rates" class="content-section tab-pane active">
-                <h1><strong>Get Instant Rates in a few steps</strong></h1>
+                <h1 class="m-0"><strong>Get Instant Rates in a few steps</strong></h1>
                 <form>
                     <div class="container-fluid">
                         <div class="row">
@@ -794,7 +794,7 @@
                         <h2>Summary</h2>
 
                         <div class="container-contact">
-                            <div class="row g-2">
+                            <div class="row g-2 w-100">
 
                                 <div class="col form-section p-3">
                                     <h2>Shipper</h2>
@@ -988,13 +988,13 @@
             <!-- Rates5 -->
             <div id="rates5" class="content-section tab-pane ">
                 <div class="row cta-ca quote">
-                    <div class="col message">
+                    <div class="col-7 message">
                         <h1>Your Booking has been confirmed!</h1>
                         <p>We’ve emailed you the details, should you need any further help<br>
                             please feel free to contact us.</p>
                     </div>
                     <div class="col mt-auto">
-                        <button class="float-end" onclick="rates2(event, 'quote2');">Check another Rate →</button>
+                        <button class="float-end" onclick="rates2(event, 'quote2');" style="font-size:  1.25rem;">Check another Rate →</button>
                     </div>
 
                 </div>
@@ -1291,7 +1291,8 @@
                             to end on one integrated system.</h1>
                     </div>
                     <div class="col mt-auto">
-                        <button class="float-end" onclick="rates2(event, 'quote2');">Get A Quote →</button>
+                        <button class="float-end" onclick="rates2(event, 'quote2');" style="font-size:  1.25rem;">Get A Quote →
+                        </button>
                     </div>
 
                 </div>
@@ -1375,7 +1376,7 @@
                     <div class="tabss-wrapper">
                         <div class="tabss">
                             <div class="tabr active">Origin and Destination</div>
-                            <div class="tabr active" >Shipment Details</div>
+                            <div class="tabr active">Shipment Details</div>
                             <div class="tabr">Select Services</div>
                             <div class="tabr">Add-Ons</div>
                             <div class="tabr">Your Contact Details</div>
@@ -1479,7 +1480,7 @@
                     <div class="tabss-wrapper">
                         <div class="tabss">
                             <div class="tabr active">Origin and Destination</div>
-                            <div class="tabr active" >Shipment Details</div>
+                            <div class="tabr active">Shipment Details</div>
                             <div class="tabr active">Select Services</div>
                             <div class="tabr">Add-Ons</div>
                             <div class="tabr">Your Contact Details</div>
@@ -1786,174 +1787,175 @@
                                         class="fas fa-arrow-right"></i>
                                 </button>
                             </div>
-                        </div><div class="services3">
-                        <h3>Select Services</h3>
-                        <div class="row mt-3">
-                            <div class="col text-center">
-                                <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"
-                                     width="50"/>
+                        </div>
+                        <div class="services3">
+                            <h3>Select Services</h3>
+                            <div class="row mt-3">
+                                <div class="col text-center">
+                                    <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"
+                                         width="50"/>
 
-                            </div>
-                            <div class="col">
+                                </div>
+                                <div class="col">
 
-                                <div class="info">
-                                    <div>
-                                        <p><b>Service</b></p>
-                                        <p>Express</p>
+                                    <div class="info">
+                                        <div>
+                                            <p><b>Service</b></p>
+                                            <p>Express</p>
+                                        </div>
+
                                     </div>
 
                                 </div>
+                                <div class="col">
+                                    <div class="info">
 
-                            </div>
-                            <div class="col">
-                                <div class="info">
+                                        <div>
+                                            <p><b>Latest Drop Off Time</b></p>
+                                            <p>Thu, 22 Feb 2024 23:59:59</p>
+                                        </div>
 
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+
+                                        <div>
+                                            <p><b>Estimated Delivery</b></p>
+                                            <p>Mon, 1 April 2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+                                        <p><b>Starts from</b></p>
+                                        <p>1.888.000 IDR</p>
+
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <!-- Konten Kiri -->
                                     <div>
-                                        <p><b>Latest Drop Off Time</b></p>
-                                        <p>Thu, 22 Feb 2024 23:59:59</p>
+
+                                    </div>
+
+                                    <!-- Link di Sebelah Kanan -->
+                                    <div>
+                                        <a href="#" class="quote-link">Get a Quote →</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col text-center">
+                                    <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"
+                                         width="50"/>
+
+                                </div>
+                                <div class="col">
+
+                                    <div class="info">
+                                        <div>
+                                            <p><b>Service</b></p>
+                                            <p>Normal</p>
+                                        </div>
+
                                     </div>
 
                                 </div>
-                            </div>
-                            <div class="col">
-                                <div class="info">
+                                <div class="col">
+                                    <div class="info">
 
+                                        <div>
+                                            <p><b>Latest Drop Off Time</b></p>
+                                            <p>Thu, 22 Feb 2024 23:59:59</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+
+                                        <div>
+                                            <p><b>Estimated Delivery</b></p>
+                                            <p>Mon, 1 April 2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+                                        <p><b>Starts from</b></p>
+                                        <p>1.888.000 IDR</p>
+
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <!-- Konten Kiri -->
                                     <div>
-                                        <p><b>Estimated Delivery</b></p>
-                                        <p>Mon, 1 April 2024</p>
+
+                                    </div>
+
+                                    <!-- Link di Sebelah Kanan -->
+                                    <div>
+                                        <a href="#" class="quote-link">Get a Quote →</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="info">
-                                    <p><b>Starts from</b></p>
-                                    <p>1.888.000 IDR</p>
+                            <div class="row mt-3">
+                                <div class="col text-center">
+                                    <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"
+                                         width="50"/>
 
                                 </div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <!-- Konten Kiri -->
-                                <div>
+                                <div class="col">
+
+                                    <div class="info">
+                                        <div>
+                                            <p><b>Service</b></p>
+                                            <p>By Sea</p>
+                                        </div>
+
+                                    </div>
 
                                 </div>
+                                <div class="col">
+                                    <div class="info">
 
-                                <!-- Link di Sebelah Kanan -->
-                                <div>
-                                    <a href="#" class="quote-link">Get a Quote →</a>
+                                        <div>
+                                            <p><b>Latest Drop Off Time</b></p>
+                                            <p>Thu, 22 Feb 2024 23:59:59</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+
+                                        <div>
+                                            <p><b>Estimated Delivery</b></p>
+                                            <p>Mon, 1 April 2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+                                        <p><b>Starts from</b></p>
+                                        <p>1.888.000 IDR</p>
+
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <!-- Konten Kiri -->
+                                    <div>
+                                        <span>Some Text Content</span>
+                                    </div>
+
+                                    <!-- Link di Sebelah Kanan -->
+                                    <div>
+                                        <a href="#" class="quote-link">Get a Quote →</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col text-center">
-                                <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"
-                                     width="50"/>
-
-                            </div>
-                            <div class="col">
-
-                                <div class="info">
-                                    <div>
-                                        <p><b>Service</b></p>
-                                        <p>Normal</p>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="col">
-                                <div class="info">
-
-                                    <div>
-                                        <p><b>Latest Drop Off Time</b></p>
-                                        <p>Thu, 22 Feb 2024 23:59:59</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="info">
-
-                                    <div>
-                                        <p><b>Estimated Delivery</b></p>
-                                        <p>Mon, 1 April 2024</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="info">
-                                    <p><b>Starts from</b></p>
-                                    <p>1.888.000 IDR</p>
-
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <!-- Konten Kiri -->
-                                <div>
-
-                                </div>
-
-                                <!-- Link di Sebelah Kanan -->
-                                <div>
-                                    <a href="#" class="quote-link">Get a Quote →</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col text-center">
-                                <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"
-                                     width="50"/>
-
-                            </div>
-                            <div class="col">
-
-                                <div class="info">
-                                    <div>
-                                        <p><b>Service</b></p>
-                                        <p>By Sea</p>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                            <div class="col">
-                                <div class="info">
-
-                                    <div>
-                                        <p><b>Latest Drop Off Time</b></p>
-                                        <p>Thu, 22 Feb 2024 23:59:59</p>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="info">
-
-                                    <div>
-                                        <p><b>Estimated Delivery</b></p>
-                                        <p>Mon, 1 April 2024</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="info">
-                                    <p><b>Starts from</b></p>
-                                    <p>1.888.000 IDR</p>
-
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <!-- Konten Kiri -->
-                                <div>
-                                    <span>Some Text Content</span>
-                                </div>
-
-                                <!-- Link di Sebelah Kanan -->
-                                <div>
-                                    <a href="#" class="quote-link">Get a Quote →</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                         <div class="footer-1">
                             <li>Please note that this quote is an estimate only. Price and time quoted are
                                 indicative
@@ -1998,7 +2000,7 @@
                     <div class="tabss-wrapper">
                         <div class="tabss">
                             <div class="tabr active">Origin and Destination</div>
-                            <div class="tabr active" >Shipment Details</div>
+                            <div class="tabr active">Shipment Details</div>
                             <div class="tabr active">Select Services</div>
                             <div class="tabr active">Add-Ons</div>
                             <div class="tabr">Your Contact Details</div>
@@ -2091,7 +2093,7 @@
                     <div class="tabss-wrapper">
                         <div class="tabss">
                             <div class="tabr active">Origin and Destination</div>
-                            <div class="tabr active" >Shipment Details</div>
+                            <div class="tabr active">Shipment Details</div>
                             <div class="tabr active">Select Services</div>
                             <div class="tabr active">Add-Ons</div>
                             <div class="tabr active">Your Contact Details</div>
@@ -2294,7 +2296,7 @@
                             The quote you requested has been sent to Shipper’s email.</h1>
                     </div>
                     <div class="col mt-auto">
-                        <button class="float-end" onclick="rates2(event, 'quote2');">Get Another Quote →</button>
+                        <button class="float-end" onclick="rates2(event, 'quote2');" style="font-size:  1.25rem;">Get Another Quote →</button>
                     </div>
 
                 </div>
@@ -2309,7 +2311,7 @@
         <h1>Our Services</h1>
         <div class="services-text mb-5">
 
-            <div class="col-lg-9">
+            <div class="col-lg-9 ">
                 <p>With the rapid advancement of technology and the rise of digitalization across all sectors,
                     the
                     needs
@@ -2342,7 +2344,7 @@
 <!-- banner -->
 <section class="banner align-content-center">
     <div class="row m-0 g-5">
-        <div class="col-lg-4 banner-content align-content-center">
+        <div class="col-lg-4 banner-content align-content-start">
             <h1>Great Pricing<br>Anytime, Anywhere</h1>
         </div>
         <div class="col-lg-6 cta-card p-4">
@@ -2572,14 +2574,14 @@
     <div id="subr1" class="subs-content active align-items-center px-3 ">
         <h2>Subscribe to Our Newsletter</h2>
         <p>Always get the latest news delivered straight to your inbox.</p>
-        <input class="mt-0" type="email" placeholder="Enter your email"/>
+        <input class="mt-0" type="email" placeholder="Enter your email" style="width: 400px;"/>
         <button onclick="subrs('subr2')">Subscribe</button>
     </div>
-<!--    <div id="subr2" class="subs-content ">-->
-<!--        <img src="assets\images\home\Subscribe-Success.png" alt="">-->
-<!--        <h2>Thank you for subscribing!</h2>-->
-<!--        <p>Check your inbox soon for great emails from KECELINE Group</p>-->
-<!--    </div>-->
+    <!--    <div id="subr2" class="subs-content ">-->
+    <!--        <img src="assets\images\home\Subscribe-Success.png" alt="">-->
+    <!--        <h2>Thank you for subscribing!</h2>-->
+    <!--        <p>Check your inbox soon for great emails from KECELINE Group</p>-->
+    <!--    </div>-->
 </section>
 
 <!-- footer -->

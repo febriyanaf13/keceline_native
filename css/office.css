@@ -88,7 +88,6 @@ header nav ul li a {
 
 .background {
     background-image: url('../assets/images/offices/office.png');
-
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -97,7 +96,7 @@ header nav ul li a {
     position: relative;
 }
 
-.container {
+.container-head {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 3vw;
     text-align: left;
@@ -105,22 +104,26 @@ header nav ul li a {
     border-top-right-radius: 20px;
     color: #fff;
     position: absolute;
-    width: 100%;
+    width: 50%;
     top: 30%;
+    /*margin-right: 20vw;*/
+    max-width: 70%;
+
+
 }
 
 
-.container h1 {
-    font-size: clamp(3rem, 5vw, 5rem);
+.container-head h1 {
+    font-size: clamp(3rem, 4vw, 5rem);
     margin-bottom: 10px;
     text-align: left;
     padding-left: 4vh;
 }
 
-.container p {
+.container-head p {
     text-align: left;
     padding-left: 4vh;
-    font-size: clamp(1rem, 2vw, 3rem);
+    font-size: clamp(1rem, 1vw, 3rem);
 
 }
 
@@ -159,7 +162,7 @@ header nav ul li a {
 .box1 {
     background-color: #fff;
     width: 100%;
-    padding: 20px; /* Beri jarak agar elemen tidak menempel */
+    /*padding: 5vw; !* Beri jarak agar elemen tidak menempel *!*/
     box-sizing: border-box;
 }
 
@@ -167,47 +170,91 @@ header nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: left; /* Rata tengah teks */
-    margin-bottom: 20px; 
-    font-size: 32px; 
-    color: black; 
+    font-size: clamp(3rem, 2vw, 5rem);
+    color: black;
+    text-align: left;
+}
+.background-pg-2 p {
+    text-align: left;
+    padding-left: 10vh;
+    padding-top: 5vh;
 }
 
 .horizontal-line-pg {
     width: 100%; /* Sesuaikan panjang garis */
     border: 1px solid #ccc;
-    margin: 10px auto; /* Rata tengah */
+    /*margin: 10px auto; !* Rata tengah *!*/
 }
 
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin: 0 auto;
-    padding: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1.5fr));
+    gap: 10vw;
+    padding: 5vh 8vw;
+    box-sizing: border-box;
+}
+.features2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
+    gap: 10vw;
+    padding: 5vh 8vw;
     box-sizing: border-box;
 }
 
 .feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: left;
-    padding: 20px;
     background-color: transparent;
     border-radius: 8px;
+    padding-bottom: 50px;
+    height: 100%;
+    min-height: 500px; /* Sesuaikan tinggi minimum card */
+
+}
+
+.feature2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    background-color: transparent;
+    border-radius: 8px;
+    padding-bottom: 50px;
+    /*height: 100%;*/
+    min-height: 100px; /* Sesuaikan tinggi minimum card */
+
 }
 
 .feature img {
     width: 100%;
-    height: auto;
-    max-height: 240px; /* Batasi tinggi gambar */
+    border-radius: 20px; /* gambar jadi bulat */
     margin-bottom: 15px;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
+    height: 500px;         /* Atur tinggi tetap */
+    object-fit: cover;     /* Pangkas gambar agar proporsional dan penuh */
 }
 
-.text-img, .text-desc, .sub-desc {
-    margin-bottom: 10px;
-    font-size: 16px; /* Ukuran font responsif */
+.text-img {
+    font-size: 2rem; /* Membesarkan teks */
+    font-weight: bold; /* Menambahkan ketebalan pada teks */
+    color: green; /* Mengubah warna teks menjadi hijau */
+    margin-bottom: 10px; /* Memberikan sedikit jarak di bawah teks */
+    width: 100%;
+
 }
+
+
+.text-desc, .sub-desc {
+    margin-bottom: 20px;
+    font-size: 16px; /* Ukuran font responsif */
+    letter-spacing: 1px;
+}
+
 
 .button, .button-1, .button-2 {
+    margin-top: auto; /* Dorong tombol ke bawah */
     display: inline-flex;
     align-items: center;
     padding: 10px 20px;
@@ -220,6 +267,9 @@ header nav ul li a {
     background-color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    align-self: flex-start; /* ini mencegah tombol melebar penuh */
+    width: fit-content;     /* hanya selebar isi */
+
 }
 
 .button:hover, .button-1:hover, .button-2:hover {
@@ -281,6 +331,7 @@ header nav ul li a {
 }
 
 .button-3, .button-4, .button-5 {
+    margin-top: auto; /* Dorong tombol ke bawah */
     display: inline-flex;
     align-items: center;
     padding: 10px 20px;
@@ -293,6 +344,8 @@ header nav ul li a {
     background-color: #fff;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    align-self: flex-start; /* ini mencegah tombol melebar penuh */
+    width: fit-content;
 }
 
 .button-3:hover, .button-4:hover, .button-5:hover {
@@ -444,29 +497,57 @@ header nav ul li a {
 /* Base styling */
 .background-office {
     background-image: url('../assets/images/offices/wh-off.png');
+    padding: 2rem 0;
+    padding-right: 50vw;
     background-size: cover;
-    background-position: center;
-    height: 50vh;
-    /*width: 100%;*/
-    background-repeat: no-repeat;
-    position: relative; /* For positioning child elements */
+    height: 70vh;
+    position: relative;
+
+}
+.background-office::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+
+}
+.background-office-content {
+    background-color: #fff;
+    padding: 100vw;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    border-radius: 0 20px 20px 0;
+    margin-top: 40vh;
+    /*max-width: auto;*/
+    /*width: max-content;*/
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+
+    color: #000;
 }
 
 .wh-square {
     background-color: #fff;
-    padding: 40px;
+    padding: 50px 50px 50px 100px;
+    justify-content: center;
+    align-items: center;
     text-align: left;
-    border-radius: 10px;
+    border-radius: 0 20px 20px 0;
     /*width: 60%; !* Adjust as needed *!*/
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    position: absolute; /* Allow positioning */
+    position: relative; /* Allow positioning */
     top: 50%; /* Vertically centered */
     left: 0; /* Positioned in the left corner */
     transform: translateY(-50%); /* Adjust for perfect vertical centering */
 }
 
 .text-office {
-    font-size: 1.8em;
+    font-size: clamp(2.5rem, 2vw, 4vw);
     color: black;
     margin-bottom: 20px;
     line-height: 1.4;
@@ -478,28 +559,26 @@ header nav ul li a {
 }
 
 .text-office-2 {
-    font-size: 1em;
+    font-size: clamp(1.2rem, 1vw, 3vw);
     color: #333;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
 .sub-text-office {
-    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end; /* Menekan tombol ke kanan */
+    margin-top: 1rem;
+
+
 }
 
 .button-get-in-touch {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    /* border: 1px solid #249300; */
-    /* border-radius: 5px; */
+    text-align: right;
     text-decoration: none;
-    color: #292929;
-    font-size: 1em;
-    font-weight: none;
-    transition: background-color 0.3s, color 0.3s;
-    margin-left: 40vw;
+    color: #000;
+
+    font-size: clamp(1.2rem, 1vw, 3vw);
 }
 
 .button-get-in-touch .fas fa {

@@ -63,10 +63,11 @@ header nav ul li a {
     align-items: center;
     width: 100%;
     gap: 1.5rem;
-    padding: 0.5rem 5%;
+    /*padding: 0.5rem 5%;*/
     background: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .logo {
     background: var(--green-color);
     display: flex;
@@ -75,26 +76,105 @@ header nav ul li a {
     color: white;
     font-weight: bold;
 
+
 }
+
 .logo img {
     width: auto;
-    height: 40px;
+    height: 80px;
     object-fit: contain;
     object-position: center;
     margin: 0px 0px 0px 0px;
 }
 
-
-.navbar-nav .nav-link {
-    font-size: 14px; /* ubah sesuai kebutuhan */
-    letter-spacing: 0.5px; /* opsional: bikin huruf lebih renggang */
+.navbar-nav .nav-item {
+    padding: 0 0.5rem;
 
 }
+
+.navbar-nav .nav-link {
+    font-size: 16px; /* ubah sesuai kebutuhan */
+    letter-spacing: 0.5px; /* opsional: bikin huruf lebih renggang */
+    padding: 10px 15px;
+
+}
+
+
 
 .nav-links a, .login-btn {
     text-decoration: none;
     color: var(--grey-color);
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.nav-tabs .nav-link {
+    color: grey;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    color: black; /* biar gak berubah jadi biru saat dihover */
+}
+.nav-tabs .nav-item {
+    border-right: 1px solid #dee2e6;
+}
+
+/* Agar tampilan lebih rapi, bisa tambahkan padding */
+.nav-tabs .nav-link {
+    padding: 15px 50px;  /* Menambahkan padding vertikal 15px dan horizontal 30px */
+    min-width: 150px;    /* Menetapkan lebar minimum kolom */
+    text-align: center;  /* Memastikan teks berada di tengah */
+
+}
+
+.nav-tabs .nav-item:first-child .nav-link {
+    border-top-left-radius: 20px;
+}
+
+.nav-tabs .nav-link.active {
+    color: green !important;
+    border: none;
+    border-radius: 0;
+
+    border-bottom: 3px solid green !important;
+    /*padding-bottom: 10px;*/
+
+}
+
+.nav-tabs .nav-link.active:hover,
+.nav-tabs .nav-link.active:focus {
+    color: green !important; /* jaga-jaga kalau aktif dan dihover */
+}
+
+
+
+.nav-tabs .nav-link i {
+    color: inherit; /* supaya ikon ikut warna teks */
+}
+
+.tabs a {
+    text-decoration: none;
+    color: var(--grey-color);
     font-size: 0.9rem;
+}
+
+.vl {
+    border-left: 1px solid var(--grey-color);
+    margin-left: 25vw;
+    height: 2rem;
+}
+
+.login-btn {
+    border: none;
+    background: none;
+    color: var(--grey-color);
+    margin-left: 0;
+    cursor: pointer;
     font-weight: 400;
 }
 .background {
@@ -107,7 +187,7 @@ header nav ul li a {
     position: relative;
 }
 
-.container {
+.container-head {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 3vw;
     text-align: left;
@@ -115,24 +195,29 @@ header nav ul li a {
     border-top-right-radius: 20px;
     color: #fff;
     position: absolute;
-    width: 100%;
+    width: 50%;
     top: 30%;
+    /*margin-right: 20vw;*/
+    max-width: 70%;
+
+
 }
 
 
-.container h1 {
-    font-size: clamp(3rem, 5vw, 5rem);
+.container-head h1 {
+    font-size: clamp(3rem, 4vw, 5rem);
     margin-bottom: 10px;
     text-align: left;
     padding-left: 4vh;
 }
 
-.container p {
+.container-head p {
     text-align: left;
     padding-left: 4vh;
-    font-size: clamp(1rem, 2vw, 3rem);
+    font-size: clamp(1rem, 1vw, 3rem);
 
 }
+
 
 .gr-box {
     background-color: #f9f9f9;
@@ -146,52 +231,19 @@ header nav ul li a {
     padding: 4vh;
 }
 
-.background-2 {
-    font-size: clamp(50px, 5vw, 70px);
+.background-2 p{
+    font-size: clamp(60px, 3vw, 70px);
     color: black;
+    padding-left: 5vh;
+    font-weight: normal;
 }
 
-.background-2 p {
-    /*padding: 2rem;*/
-}
 
 .desc {
-    /*font-size: 3vh;*/
+    font-size: 3vh;
     text-align: justify;
     color: black;
-}
-
-.desc-2 {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    /*height: 400px; */
-    padding: 0 20px;
-    /*position: absolute;
-    top: 0%;*/
-    margin-top: 15px;
-    margin-left: 40%;
-    font-size: 15px;
-    color: black;
-}
-
-.img-box {
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 725px;
-    width: 100%;
-}
-
-.features {
-    display: flex;
-    gap: 0; /* Removes any space between the images */
-}
-
-.img-class {
-    height: 725px;
-    width: 32.8vw;
+    font-weight: lighter;
 }
 
 .wh-box {
@@ -251,6 +303,15 @@ header nav ul li a {
     align-items: center;
 
 }
+
+
+.background-2 p{
+    font-size: clamp(60px, 3vw, 70px);
+    color: black;
+    padding-left: 5vh;
+    font-weight: lighter;
+}
+
 
 
 .background-4 {
@@ -320,6 +381,15 @@ header nav ul li a {
     color: black;
 }
 
+.background-20 {
+    background-image: url('../assets/images/about/industrial.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: auto;
+    height: 80vh;
+    background-repeat: no-repeat;
+}
+
 
 .text-1 {
     display: flex;
@@ -330,80 +400,46 @@ header nav ul li a {
     color: black;
 }
 
-.certifications {
-    background-color: #f9f9f9;
-    padding: 4vh;
-    text-align: center;
-    box-sizing: border-box;
+.certifications{
+    background-color: #e8e8e8;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
-
-.certifications h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.certification-container {
+.certification-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 2rem;
-    justify-items: center;
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+    grid-template-rows: repeat(2, auto);   /* 3 baris */
+    gap: 50px 70px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+
+}
+
+.certification-card {
+    display: flex;
     align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.certification-item {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 20rem;
-    height: 10rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-/* Gambar dalam Certification */
-.certification-item img {
-    width: 80px;
-    height: auto;
-    margin-bottom: 1rem;
+.certification-card img {
+    width: 150px;
+    height: 150px;
     object-fit: contain;
 }
 
-
-/* Efek hover pada Certification item */
-.certification-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-
-.certification-icon {
-    width: 80px;
-    height: auto;
-    margin-bottom: 1rem;
-    object-fit: contain;
-}
-
-.certification-item p {
-    color: #000;
-    font-size: clamp(14px, 1vw, 1rem);
+.certification-card p {
     margin: 0;
-    font-weight: bold;
+    font-size: clamp(40px, 1.7vw, 50px);
+    font-weight: 500;
 }
 
 
-/* Gambar latar belakang */
-
-
-/* Gambar latar belakang */
-.background-20 {
-    background-image: url('../assets/images/about/industrial.jpg');
-    background-size: cover;
-    background-position: center;
-    margin: auto;
-    height: 80vh;
-    background-repeat: no-repeat;
-}
 
 .lis-putih {
     height: 90%;
