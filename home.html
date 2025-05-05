@@ -1,0 +1,2810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics Excellence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--slider-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-transparent">
+    <div class="container-fluid px-5 py-3">
+        <div class="logo mx-5"><img src="assets/images/navbar/logo-perusahaan.png" alt=""></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse me-5" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active small" aria-current="page" href="home.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link small" href="about.html">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link small" href="services.html">SERVICES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link small" href="news.html">NEWS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link small" href="office.html">OUR OFFICES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link small" href="careers.html">CAREERS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link small" href="contact.html">CONTACT US</a>
+                </li>
+
+            </ul>
+
+            <div class="vl ms-auto px-2"></div>
+
+            <a href="login.html" class="login-btn ">LOGIN</a>
+        </div>
+    </div>
+</nav>
+
+<!-- home -->
+<div class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>All-Around<br>Logistic Excellence</h1>
+            <p>Unleashing Excellence Through Our Diverse Service Offerings</p>
+        </div>
+    </div>
+
+
+    <div class="search-container ">
+        <!-- navigation -->
+
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" onclick="switchTab('rates');"><i
+                        class="fas fa-calculator"></i>
+                    Rates</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" onclick="switchTab('tracking');"><i
+                        class="fas fa-map-marker-alt"></i>
+                    Tracking</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" onclick="switchTab('schedule');"><i
+                        class="fas fa-calendar-alt"></i>
+                    Schedule</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" onclick="switchTab('quote');"><i class="fas fa-quote-left"></i>
+                    Get a Quote</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content px-3 py-3">
+            <!-- Rates -->
+            <div id="rates" class="content-section tab-pane active">
+                <h1 class="m-0"><strong>Get Instant Rates in a few steps</strong></h1>
+                <form>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-3 ">
+                                <label class="form-label">From</label>
+                                <select id="origin" class="form-select form-select mb-3"
+                                        aria-label="Large select example">
+                                    <option selected="true" disabled="true">Select From City,Country</option>
+                                    <option value="Jakarta">Jakarta</option>
+                                    <option value="Surabaya">Surabaya</option>
+                                    <option value="Bandung">Bandung</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 ">
+                                <label class="form-label">To</label>
+                                <select id="destination" class="form-select form-select mb-3"
+                                        aria-label="Large select example">
+                                    <option selected="true" disabled="true">Select To City,Country</option>
+                                    <option value="Bali">Bali</option>
+                                    <option value="Yogyakarta">Yogyakarta</option>
+                                    <option value="Medan">Medan</option>
+                                </select></div>
+                            <div class="col-lg-2 mx-1 ">
+                                <label class="form-label">Date</label>
+                                <input type="date" id="date"
+                                       class="form-control mb-3"/>
+                            </div>
+                            <div class="col">
+
+                                <label class="form-label">Service</label>
+
+                                <select id="vehicle" class="form-select form-select mb-3"
+                                        aria-label="Large select example">
+                                    <option selected="true" disabled="true">Select Service</option>
+                                    <option value="Express">Express</option>
+                                    <option value="Normal">Normal</option>
+                                    <option value="By Sea">By Sea</option>
+                                </select></div>
+                            <div class="col-lg-1">
+                                <button class="rates-btn float-end" style="margin-top: 30px"
+                                        onclick="rates2(event, 'rates2')"><i
+                                        class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <!--Rates2-->
+            <div id="rates2" class="content-section">
+                <div class="row route-info">
+                    <div class="info-item">
+                        <span>From: <strong><span id="from-rates2"></span></strong></span>
+                    </div>
+                    <div class="info-item arrow">→</div>
+                    <div class="info-item">
+                        <span>To: <strong><span id="to-rates-2"></span></strong></span>
+                    </div>
+                    <div class="info-item">
+                        <span>Shipment Date: <strong><span id="dates-rates2"></span></strong></span>
+                    </div>
+                    <div class="info-item">
+                        <span>Service Type: <strong><span id="ship"></span></strong></span>
+                    </div>
+                    <div class="info-item edit-link">
+                        <a href="#">Edit Service Details</a>
+                    </div>
+                </div>
+
+
+                <div class="form-content">
+                    <h3 class="mt-4">Shipment Details</h3>
+
+                    <div class="row g-3 align-items-center">
+                        <div class="col-lg-4">
+                            <label class="col-form-label">Weight</label>
+                            <div class="input-group">
+                                <input id="weight-rates2" type="text" class="form-control w-50" placeholder="Weight">
+                                <span class="input-group-text">Kg</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="col-form-label">Number Of Package</label>
+                            <select class="form-select form-select"
+                                    aria-label="Large select example">
+                                <option selected="true" disabled="true">Number Of Package</option>
+                                <option value="a">A</option>
+                                <option value="b">B</option>
+                                <option value="c">C</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label class="col-form-label">Select Commodity Type</label>
+                            <select class="form-select form-select"
+                                    aria-label="Large select example">
+                                <option selected="true" disabled="true">Number Of Package</option>
+                                <option value="a">A</option>
+                                <option value="b">B</option>
+                                <option value="c">C</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row g-3 align-items-end mb-3 ">
+                        <div class="col-lg-3">
+                            <label class="col-form-label">Volume</label>
+                            <div class="input-group">
+                                <input id="volume-rates" type="text" class="form-control w-50" placeholder="0">
+                                <span class="input-group-text">m³</span>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-1 mb-2 d-flex justify-content-center align-items-center">
+                            <span class="text-center">or</span>
+                        </div>
+                        <div class="col-lg-2">
+                            <label class="col-form-label">Size</label>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control w-50" placeholder="Length">
+                                <span class="input-group-text">cm</span>
+
+                            </div>
+                        </div>
+
+                        <div class="col">
+
+                            <div class="input-group">
+                                <input type="text" class="form-control w-50" placeholder="Width">
+                                <span class="input-group-text">cm</span>
+                            </div>
+                        </div>
+                        <div class="col">
+
+                            <div class="input-group">
+                                <input type="text" class="form-control w-50" placeholder="Hight">
+                                <span class="input-group-text">cm</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="add-item">
+                    <i class="fas fa-plus-circle"></i> Add Another Item
+                </div>
+                <div class="buttons">
+                    <button class="back" onclick="switchTab('rates');"><i class="fas fa-arrow-left"></i> Back
+                    </button>
+                    <button onclick="rates3(event, 'rates3');">Search <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+            <!--Rates3-->
+            <div id="rates3" class="content-section tab-pane"><br>
+                <div class="row g-3 route-info">
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col">
+                                <div class="info-item">
+                                    <span>From: <strong>Shanghai, China 510000</strong></span>
+                                </div>
+
+                            </div>
+                            <div class="col">
+                                <div class="info-item arrow text-center">→</div>
+                            </div>
+                            <div class="col">
+                                <div class="info-item">
+                                    <span>To: <strong>Semarang, Indonesia 50114</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg">
+                        <div class="row g-3 ">
+
+                            <div class="col text-start">
+                                <div class="info-item">
+                                    <span>Shipment Date: <strong>Friday, 23 Feb 2024</strong></span>
+                                </div>
+                                <div class="info-item">
+                                    <span>Service Type: <strong>By Sea</strong></span>
+                                </div>
+                            </div>
+                            <div class="col text-end">
+
+                                <div class="info-item edit-link">
+                                    <a href="#">Edit Service Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <div class="summary">
+                        <div class="row mb-3">
+                            <div class="col text-start">
+
+                                <h2>Summary</h2>
+                            </div>
+                            <div class="col text-end">
+                                <div class="edit-link-1">
+                                    <a href="#">Edit Shipment</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-2">
+                            <div class="col">
+                                <p>Pieces</p>
+                                <p class="value">2</p>
+                            </div>
+                            <div class="col ">
+                                <p>Actual Weight</p>
+                                <p class="value">40 kg</p>
+                            </div>
+                            <div class="col">
+                                <p>Total Volume</p>
+                                <p class="value">1.05 m³</p>
+                            </div>
+                            <div class="col-lg-3 ">
+                                <p>Est. Chargeable Weight</p>
+                                <p class="value">40 kg</p>
+                            </div>
+                            <div class="col-lg-3">
+                                <p>Commodity Type</p>
+                                <p class="value">Package</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="rates">
+                        <p>Want better rates?</p>
+                        <p>Sign up as a business partner today and enjoy better rates when you ship with us today.
+                            Terms and conditions apply.</p>
+                        <button id="myBtn1">Sign Up Now</button>
+                    </div>
+
+                    <!-- The Modal -->
+                    <div id="modal1" class="modal1">
+                        <div class="modal1-content">
+                            <span class="close-btn">&times;</span>
+                            <h1>Partner Benefits</h1>
+                            <p>You will get many benefit by signing up an account with us – partner rates, regular
+                                billing,
+                                shipment tracking and many more!</p>
+                            <form>
+                                <div class="row">
+                                    <div>
+                                        <label for="first-name">First Name*</label>
+                                        <input type="text" id="first-name" name="first-name">
+                                    </div>
+                                    <div>
+                                        <label for="last-name">Last Name*</label>
+                                        <input type="text" id="last-name" name="last-name">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div>
+                                        <label for="country-code">Country Code</label>
+                                        <input type="text" id="country-code" name="country-code">
+                                    </div>
+                                    <div>
+                                        <label for="phone">Phone</label>
+                                        <input type="text" id="phone" name="phone">
+                                    </div>
+                                    <div>
+                                        <label for="extension">Extension</label>
+                                        <input type="text" id="extension" name="extension">
+                                    </div>
+                                </div>
+
+                                <label for="email">Email*</label>
+                                <input type="email" id="email" name="email">
+
+                                <label for="country">Country/Territory</label>
+                                <input type="text" id="country" name="country">
+
+                                <label for="company-name">Company Name</label>
+                                <input type="text" id="company-name" name="company-name">
+
+                                <label for="address-line-1">Address Line 1</label>
+                                <input type="text" id="address-line-1" name="address-line-1">
+
+                                <label for="address-line-2">Address Line 2</label>
+                                <input type="text" id="address-line-2" name="address-line-2">
+
+                                <div class="row">
+                                    <div>
+                                        <label for="postal-code">Postal Code</label>
+                                        <input type="text" id="postal-code" name="postal-code">
+                                    </div>
+                                    <div>
+                                        <label for="city">City</label>
+                                        <input type="text" id="city" name="city">
+                                    </div>
+                                    <div>
+                                        <label for="state">State</label>
+                                        <input type="text" id="state" name="state">
+                                    </div>
+                                </div>
+
+                                <label for="representative">Your message will be sent to the following
+                                    representative.
+                                    Select if unsure</label>
+                                <select id="representative" name="representative">
+                                    <option value="opsi">Opsi</option>
+                                </select>
+
+                                <label for="branch">Select Branch</label>
+                                <select id="branch" name="branch">
+                                    <option value="">Select Branch</option>
+                                    <!-- Add other branches as needed -->
+                                </select>
+
+                                <div>
+                                    <input type="checkbox" id="email-communications" name="email-communications">
+                                    <label for="email-communications">I agree to receive email communications from
+                                        PT
+                                        Kamisindo Cepat Nusantara.</label>
+                                </div>
+
+                                <div class="security-measures">CAPTCHA or OTHER SECURITY MEASURES</div>
+
+                                <div class="button-container">
+                                    <div class="buttons1 cancel-button">Cancel</div>
+                                    <div class="buttons1 submit-button" id="myBtn2">Submit</div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="modal2" class="modal1">
+                        <div class="modal1-content">
+                            <h1>Partner Benefits</h1>
+                            <p>Thank you for Signing Up!</p>
+                            <p>Please log in to see your discounted rate.</p>
+                            <div class="button-container">
+                                <div class="buttons1 cancel-button">Close</div>
+                                <div class="buttons1 submit-button">Go to Sign in</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="services3">
+                        <h3>Select Services</h3>
+                        <div class="row mt-3">
+                            <div class="col text-center">
+                                <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"
+                                     width="50"/>
+
+                            </div>
+                            <div class="col">
+
+                                <div class="info">
+                                    <div>
+                                        <p><b>Service</b></p>
+                                        <p>Express</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="col">
+                                <div class="info">
+
+                                    <div>
+                                        <p><b>Latest Drop Off Time</b></p>
+                                        <p>Thu, 22 Feb 2024 23:59:59</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="info">
+
+                                    <div>
+                                        <p><b>Estimated Delivery</b></p>
+                                        <p>Mon, 1 April 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="info">
+                                    <p><b>Starts from</b></p>
+                                    <p>1.888.000 IDR</p>
+
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Konten Kiri -->
+                                <div>
+
+                                </div>
+
+                                <!-- Link di Sebelah Kanan -->
+                                <div>
+                                    <a href="#" class="quote-link">Get a Quote →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col text-center">
+                                <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"
+                                     width="50"/>
+
+                            </div>
+                            <div class="col">
+
+                                <div class="info">
+                                    <div>
+                                        <p><b>Service</b></p>
+                                        <p>Normal</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="col">
+                                <div class="info">
+
+                                    <div>
+                                        <p><b>Latest Drop Off Time</b></p>
+                                        <p>Thu, 22 Feb 2024 23:59:59</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="info">
+
+                                    <div>
+                                        <p><b>Estimated Delivery</b></p>
+                                        <p>Mon, 1 April 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="info">
+                                    <p><b>Starts from</b></p>
+                                    <p>1.888.000 IDR</p>
+
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Konten Kiri -->
+                                <div>
+
+                                </div>
+
+                                <!-- Link di Sebelah Kanan -->
+                                <div>
+                                    <a href="#" class="quote-link">Get a Quote →</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col text-center">
+                                <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"
+                                     width="50"/>
+
+                            </div>
+                            <div class="col">
+
+                                <div class="info">
+                                    <div>
+                                        <p><b>Service</b></p>
+                                        <p>By Sea</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="col">
+                                <div class="info">
+
+                                    <div>
+                                        <p><b>Latest Drop Off Time</b></p>
+                                        <p>Thu, 22 Feb 2024 23:59:59</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="info">
+
+                                    <div>
+                                        <p><b>Estimated Delivery</b></p>
+                                        <p>Mon, 1 April 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="info">
+                                    <p><b>Starts from</b></p>
+                                    <p>1.888.000 IDR</p>
+
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Konten Kiri -->
+                                <div>
+                                    <span>Some Text Content</span>
+                                </div>
+
+                                <!-- Link di Sebelah Kanan -->
+                                <div>
+                                    <a href="#" class="quote-link">Get a Quote →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-1">
+                            <li>Please note that this quote is an estimate only. Price and time quoted are
+                                indicative
+                                only
+                                and might differ from the actual booking depending on the information that you
+                                provide.
+                            </li>
+                            <li>Rates shown here may be different than the actual charges for your shipment as it
+                                might
+                                not
+                                include duties, taxes, custom charges, storage fees or any other surcharges and
+                                fees.
+                            </li>
+                            <li>Log in to your account to see your account-specific rates and services.</li>
+                            <br>
+                            <p>
+                                <a href="#">Print / Download Rates</a>
+                            </p>
+                        </div>
+
+                        <div class="buttons3">
+                            <button class="back" onclick="rates2(event, 'rates2');"><i
+                                    class="fas fa-arrow-left"></i>
+                                Back
+                            </button>
+
+                            <button onclick="rates4(event, 'rates4');">Continue Booking <i
+                                    class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Rates4-->
+            <div id="rates4" class="content-section tab-pane "><br>
+                <div class="row g-3 route-info mb-3">
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col">
+                                <div class="info-item">
+                                    <span>From: <strong>Shanghai, China 510000</strong></span>
+                                </div>
+
+                            </div>
+                            <div class="col">
+                                <div class="info-item arrow text-center">→</div>
+                            </div>
+                            <div class="col">
+                                <div class="info-item">
+                                    <span>To: <strong>Semarang, Indonesia 50114</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg">
+                        <div class="row g-3 ">
+
+                            <div class="col text-start">
+                                <div class="info-item">
+                                    <span>Shipment Date: <strong>Friday, 23 Feb 2024</strong></span>
+                                </div>
+                                <div class="info-item">
+                                    <span>Service Type: <strong>By Sea</strong></span>
+                                </div>
+                            </div>
+                            <div class="col text-end">
+
+                                <div class="info-item edit-link">
+                                    <a href="#">Edit Service Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-1">
+                    <div class="summary">
+                        <div class="row mb-3">
+                            <div class="col text-start">
+
+                                <h2>Summary</h2>
+                            </div>
+                            <div class="col text-end">
+                                <div class="edit-link-1">
+                                    <a href="#">Edit Shipment</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-2">
+                            <div class="col">
+                                <p>Pieces</p>
+                                <p class="value">2</p>
+                            </div>
+                            <div class="col ">
+                                <p>Actual Weight</p>
+                                <p class="value">40 kg</p>
+                            </div>
+                            <div class="col">
+                                <p>Total Volume</p>
+                                <p class="value">1.05 m³</p>
+                            </div>
+                            <div class="col-lg-3 ">
+                                <p>Est. Chargeable Weight</p>
+                                <p class="value">40 kg</p>
+                            </div>
+                            <div class="col-lg-3">
+                                <p>Commodity Type</p>
+                                <p class="value">Package</p>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col text-center">
+                                <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"
+                                     width="50"/>
+
+                            </div>
+                            <div class="col">
+
+                                <div class="info">
+                                    <div>
+                                        <p><b>Service</b></p>
+                                        <p>Express</p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="col">
+                                <div class="info">
+
+                                    <div>
+                                        <p><b>Latest Drop Off Time</b></p>
+                                        <p>Thu, 22 Feb 2024 23:59:59</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="info">
+
+                                    <div>
+                                        <p><b>Estimated Delivery</b></p>
+                                        <p>Mon, 1 April 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="info">
+                                    <p><b>Starts from</b></p>
+                                    <p>1.888.000 IDR</p>
+
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <!-- Konten Kiri -->
+                                <div>
+
+                                </div>
+
+                                <!-- Link di Sebelah Kanan -->
+                                <div>
+                                    <a href="#" class="quote-link">Get a Quote →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="container-2">
+                    <div class="contact">
+                        <h2>Summary</h2>
+
+                        <div class="container-contact">
+                            <div class="row g-2 w-100">
+
+                                <div class="col form-section p-3">
+                                    <h2>Shipper</h2>
+                                    <form>
+                                        <div class="row mb-4">
+                                            <div class="col">
+                                                <label for="reg-firstname" class="form-label">First Name</label>
+                                                <input type="text" id="reg-firstname" class="form-control"
+                                                       placeholder="Enter first name"
+                                                       name="firstname">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-lastname" class="form-label">Last Name</label>
+                                                <input type="text" id="reg-lastname" class="form-control"
+                                                       placeholder="Enter lastname"
+                                                       name="lastname">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col">
+                                                <label for="reg-countrycode" class="form-label">Country Code</label>
+                                                <input type="text" id="reg-countrycode" class="form-control"
+                                                       placeholder="Enter country code"
+                                                       name="countrycode">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-phone" class="form-label">Phone</label>
+                                                <input type="text" id="reg-phone" class="form-control"
+                                                       placeholder="Enter phone number"
+                                                       name="phone">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-extension" class="form-label">Extension</label>
+                                                <input type="text" id="reg-extension" class="form-control"
+                                                       placeholder="Enter extension"
+                                                       name="extension">
+                                            </div>
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="reg-email"
+                                                   aria-describedby="email">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-country" class="form-label">Country/Territory</label>
+                                            <input type="text" class="form-control" id="reg-country"
+                                                   aria-describedby="country">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-company-name" class="form-label">Company Name</label>
+                                            <input type="text" class="form-control" id="reg-company-name"
+                                                   aria-describedby="companyname">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-address-line1" class="form-label">Address Line 1</label>
+                                            <input type="text" class="form-control" id="reg-address-line1"
+                                                   aria-describedby="addressline1">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-address-line2" class="form-label">Address Line 2</label>
+                                            <input type="text" class="form-control" id="reg-address-line2"
+                                                   aria-describedby="addressline2">
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col">
+                                                <label for="reg-postalcode" class="form-label">Postal Code</label>
+                                                <input type="text" id="reg-postalcode" class="form-control"
+                                                       placeholder="Enter postal code"
+                                                       name="postalcode">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-city" class="form-label">City</label>
+                                                <input type="text" id="reg-city" class="form-control"
+                                                       placeholder="Enter city"
+                                                       name="city">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-state" class="form-label">State</label>
+                                                <input type="text" id="reg-state" class="form-control"
+                                                       placeholder="Enter extension"
+                                                       name="state">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col form-section p-3">
+                                    <h2>Consignee</h2>
+                                    <form>
+                                        <div class="row mb-4">
+                                            <div class="col">
+                                                <label for="reg-firstname" class="form-label">First Name</label>
+                                                <input type="text" id="reg-firstname" class="form-control"
+                                                       placeholder="Enter first name"
+                                                       name="firstname">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-lastname" class="form-label">Last Name</label>
+                                                <input type="text" id="reg-lastname" class="form-control"
+                                                       placeholder="Enter lastname"
+                                                       name="lastname">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col">
+                                                <label for="reg-countrycode" class="form-label">Country Code</label>
+                                                <input type="text" id="reg-countrycode" class="form-control"
+                                                       placeholder="Enter country code"
+                                                       name="countrycode">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-phone" class="form-label">Phone</label>
+                                                <input type="text" id="reg-phone" class="form-control"
+                                                       placeholder="Enter phone number"
+                                                       name="phone">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-extension" class="form-label">Extension</label>
+                                                <input type="text" id="reg-extension" class="form-control"
+                                                       placeholder="Enter extension"
+                                                       name="extension">
+                                            </div>
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="reg-email"
+                                                   aria-describedby="email">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-country" class="form-label">Country/Territory</label>
+                                            <input type="text" class="form-control" id="reg-country"
+                                                   aria-describedby="country">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-company-name" class="form-label">Company Name</label>
+                                            <input type="text" class="form-control" id="reg-company-name"
+                                                   aria-describedby="companyname">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-address-line1" class="form-label">Address Line 1</label>
+                                            <input type="text" class="form-control" id="reg-address-line1"
+                                                   aria-describedby="addressline1">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-address-line2" class="form-label">Address Line 2</label>
+                                            <input type="text" class="form-control" id="reg-address-line2"
+                                                   aria-describedby="addressline2">
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col">
+                                                <label for="reg-postalcode" class="form-label">Postal Code</label>
+                                                <input type="text" id="reg-postalcode" class="form-control"
+                                                       placeholder="Enter postal code"
+                                                       name="postalcode">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-city" class="form-label">City</label>
+                                                <input type="text" id="reg-city" class="form-control"
+                                                       placeholder="Enter city"
+                                                       name="city">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-state" class="form-label">State</label>
+                                                <input type="text" id="reg-state" class="form-control"
+                                                       placeholder="Enter extension"
+                                                       name="state">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="buttons">
+                            <button class="back" onclick="rates3(event, 'rates3');"><i
+                                    class="fas fa-arrow-left"></i>
+                                Back
+                            </button>
+                            <button onclick="switchTab('rates5');">Submit <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="footer-1">
+                        <li>Terms and conditions or other information here if needed.</li>
+                        <li>Log in to your account to see your account-specific rates and services.</li>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rates5 -->
+            <div id="rates5" class="content-section tab-pane ">
+                <div class="row cta-ca quote">
+                    <div class="col-7 message">
+                        <h1>Your Booking has been confirmed!</h1>
+                        <p>We’ve emailed you the details, should you need any further help<br>
+                            please feel free to contact us.</p>
+                    </div>
+                    <div class="col mt-auto">
+                        <button class="float-end" onclick="rates2(event, 'quote2');" style="font-size:  1.25rem;">Check another Rate →</button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Tracking -->
+            <div id="tracking" class="content-section  tab-pane">
+                <h1><strong>Tracks Your Shipment</strong></h1>
+                <p>Separate more numbers with commas</p>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input class="form-control form-control mb-3" type="text" id="res"
+                                   placeholder="Insert Tracking Number">
+                        </div>
+                        <div class="col ">
+
+                            <button class="rates-btn"
+                                    onclick="checkTrack(event, 'tracks')">Search Now
+                                <span>
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tracks" class="track-detail">
+                    <h1 class="titles">Latest Status Information</h1>
+
+                    <div class="tracking-card">
+                        <div class="header-wrapper">
+                            <img src="assets\images\careers\box-careers.png">
+
+                            <div class="tracking-header">
+                                <div class="tracking-info">
+                                    <div class="label">Tracking No.</div>
+                                    <div class="value"><span id="resi"></span></div>
+                                </div>
+                                <div class="tracking-info">
+                                    <div class="label">Origin</div>
+                                    <div class="value">Shanghai, China</div>
+                                </div>
+                                <div class="tracking-info">
+                                    <div class="label">Destination</div>
+                                    <div class="value">Semarang, Indonesia</div>
+                                </div>
+                                <div class="tracking-info">
+                                    <div class="label">Delivery Status</div>
+                                    <div class="value"></div>
+                                </div>
+                                <div class="tracking-info">
+                                    <div class="label">Service Type</div>
+                                    <div class="value">By Sea</div>
+                                </div>
+                                <div class="tracking-info">
+                                    <div class="label">Posted Date</div>
+                                    <div class="value">1 Feb, 08:25 WIB</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="toggle-timeline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                 fill="none"
+                                 stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6"/>
+                            </svg>
+                            <span>View Timeline</span>
+                        </button>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot current"></div>
+                                <div class="timeline-date">
+                                    <span class="date">Today</span>
+                                    <span class="time">09:50 WIB</span>
+                                </div>
+                                <div class="status">Item is currently with Customs awaiting Clearance</div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">
+                                    <span class="date">2 Feb</span>
+                                    <span class="time">19:37 WIB</span>
+                                </div>
+                                <div class="status">Shipment Received at Processing Facilities</div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">
+                                    <span class="date">1 Feb</span>
+                                    <span class="time">08:25 WIB</span>
+                                </div>
+                                <div class="status">Shipment Picked Up</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Schedule -->
+            <div id="schedule" class="content-section tab-pane ">
+                <h1><strong>Check Schedule Availability</strong></h1>
+                <form>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-3 ">
+                                <label class="form-label">From</label>
+                                <select id="schedule-origin" class="form-select form-select mb-3"
+                                        aria-label="Large select example">
+                                    <option selected="true" disabled="true">Select From City,Country</option>
+                                    <option value="Jakarta">Jakarta</option>
+                                    <option value="Surabaya">Surabaya</option>
+                                    <option value="Bandung">Bandung</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-3 ">
+                                <label class="form-label">To</label>
+                                <select id="schedule-destination" class="form-select form-select mb-3"
+                                        aria-label="Large select example">
+                                    <option selected="true" disabled="true">Select To City,Country</option>
+                                    <option value="Bali">Bali</option>
+                                    <option value="Yogyakarta">Yogyakarta</option>
+                                    <option value="Medan">Medan</option>
+                                </select></div>
+                            <div class="col-lg-2 mx-1 ">
+                                <label class="form-label">Date</label>
+                                <input type="date" id="schedule-date"
+                                       class="form-control  mb-3"/>
+                            </div>
+                            <div class="col">
+                                <label class="form-label">Service</label>
+                                <select id="schedule-vehicle" class="form-select form-select mb-3"
+                                        aria-label="Large select example">
+                                    <option selected="true" disabled="true">Select Service</option>
+                                    <option value="Express">Express</option>
+                                    <option value="Normal">Normal</option>
+                                    <option value="By Sea">By Sea</option>
+                                </select></div>
+                            <div class="col-lg-1">
+                                <button class="rates-btn float-end" style="margin-top: 30px"
+                                        onclick="rates2(event, 'schedule2')"><i
+                                        class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- Schedule2 -->
+            <div id="schedule2" class="content-section py-3">
+                <div class="row g-3 route-info">
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col">
+                                <div class="info-item">
+                                    <span>From: <strong>Shanghai, China 510000</strong></span>
+                                </div>
+
+                            </div>
+                            <div class="col">
+                                <div class="info-item arrow text-center">→</div>
+                            </div>
+                            <div class="col">
+                                <div class="info-item">
+                                    <span>To: <strong>Semarang, Indonesia 50114</strong></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg">
+                        <div class="row g-3 ">
+
+                            <div class="col text-start">
+                                <div class="info-item">
+                                    <span>Shipment Date: <strong>Friday, 23 Feb 2024</strong></span>
+                                </div>
+                                <div class="info-item">
+                                    <span>Service Type: <strong>By Sea</strong></span>
+                                </div>
+                            </div>
+                            <div class="col text-end">
+
+                                <div class="info-item edit-link">
+                                    <a href="#">Edit Service Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <h1>Search Results</h1>
+                    <p>
+                        If the "Book" column is blank, we are unable to accept new bookings for the respective
+                        vessel
+                        due to
+                        operating constraints or missed cutoff date.
+                    </p>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="results-table">
+                        <thead class="results-header">
+                        <tr>
+                            <th>Origin City</th>
+                            <th>POL</th>
+                            <th>Transfer Port</th>
+                            <th>POD</th>
+                            <th>Destination City</th>
+                            <th>Est. Trans. Time <span class="time-icon">?</span></th>
+                            <th>Cargo Nature</th>
+                            <th>Book</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Shanghai</td>
+                            <td>Shanghai</td>
+                            <td>Singapore</td>
+                            <td>Semarang</td>
+                            <td>Semarang</td>
+                            <td>11 days</td>
+                            <td>Dry</td>
+                            <td>
+                                <button class="book-button">Book</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Shanghai</td>
+                            <td>Shanghai</td>
+                            <td>Singapore</td>
+                            <td>Semarang</td>
+                            <td>Semarang</td>
+                            <td>15 days</td>
+                            <td>Dry</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Shanghai</td>
+                            <td>Shanghai</td>
+                            <td>Singapore</td>
+                            <td>Semarang</td>
+                            <td>Semarang</td>
+                            <td>16 days</td>
+                            <td>Dry</td>
+                            <td>
+                                <button class="book-button">Book</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Shanghai</td>
+                            <td>Shanghai</td>
+                            <td>Singapore</td>
+                            <td>Semarang</td>
+                            <td>Semarang</td>
+                            <td>14 days</td>
+                            <td>Reefer</td>
+                            <td>
+                                <button class="book-button">Book</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Shanghai</td>
+                            <td>Shanghai</td>
+                            <td>Singapore</td>
+                            <td>Semarang</td>
+                            <td>Semarang</td>
+                            <td>16 days</td>
+                            <td>Reefer</td>
+                            <td>
+                                <button class="book-button">Book</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Quote -->
+            <div id="quote" class="content-section tab-pane ">
+                <div class="row cta-ca quote">
+                    <div class="col">
+                        <h1>Start your logistic journey with us and <br> experience the smooth and trusted
+                            flow from end
+                            <br>
+                            to end on one integrated system.</h1>
+                    </div>
+                    <div class="col mt-auto">
+                        <button class="float-end" onclick="rates2(event, 'quote2');" style="font-size:  1.25rem;">Get A Quote →
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Quote2 -->
+            <div id="quote2" class="content-section">
+                <div class="gr-box">
+                    <div class="containerr">
+                        <div class="headerr">Get your quotes</div>
+
+                        <div class="tabss-wrapper">
+                            <div class="tabss">
+                                <div class="tabr active">Origin and Destination</div>
+                                <div class="tabr">Shipment Details</div>
+                                <div class="tabr">Select Services</div>
+                                <div class="tabr">Add-Ons</div>
+                                <div class="tabr">Your Contact Details</div>
+                            </div>
+                        </div>
+
+                        <form>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-3 ">
+                                        <label class="form-label">From</label>
+                                        <select id="from-quote" class="form-select form-select mb-3"
+                                                aria-label="Large select example">
+                                            <option selected="true" disabled="true">Select From City,Country
+                                            </option>
+                                            <option value="Jakarta">Jakarta</option>
+                                            <option value="Surabaya">Surabaya</option>
+                                            <option value="Bandung">Bandung</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-1 d-flex align-items-center align-content-center justify-content-center">
+                                        <i class="fas fa-exchange-alt"></i>
+                                    </div>
+                                    <div class="col-lg-3 ">
+                                        <label class="form-label">To</label>
+                                        <select id="to-quote" class="form-select form-select mb-3"
+                                                aria-label="Large select example">
+                                            <option selected="true" disabled="true">Select To City,Country
+                                            </option>
+                                            <option value="Bali">Bali</option>
+                                            <option value="Yogyakarta">Yogyakarta</option>
+                                            <option value="Medan">Medan</option>
+                                        </select></div>
+                                    <div class="col-lg-2 mx-1 ">
+                                        <label class="form-label">Date</label>
+                                        <input type="date" id="quote-date"
+                                               class="form-control form-control mb-3"/>
+                                    </div>
+                                    <div class="col">
+                                        <label class="form-label">Service</label>
+                                        <select id="quote-vehicle" class="form-select form-select mb-3"
+                                                aria-label="Large select example">
+                                            <option selected="true" disabled="true">Select Service</option>
+                                            <option value="Express">Express</option>
+                                            <option value="Normal">Normal</option>
+                                            <option value="By Sea">By Sea</option>
+                                        </select></div>
+
+                                </div>
+                            </div>
+
+                        </form>
+                        <div class="next-button">
+                            <button onclick="rates2(event, 'quote3');">Next <i class="fas fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote3 -->
+            <div id="quote3" class="content-section">
+                <div class="containerr">
+                    <div class="headerr">Get your quotes</div>
+                    <div class="tabss-wrapper">
+                        <div class="tabss">
+                            <div class="tabr active">Origin and Destination</div>
+                            <div class="tabr active">Shipment Details</div>
+                            <div class="tabr">Select Services</div>
+                            <div class="tabr">Add-Ons</div>
+                            <div class="tabr">Your Contact Details</div>
+                        </div>
+                    </div>
+                    <div class="form-content">
+                        <div class="row g-3 align-items-center">
+                            <div class="col">
+                                <label class="col-form-label">Package</label>
+                                <select class="form-select form-select"
+                                        aria-label="Large select example">
+                                    <option selected="true" disabled="true">Select Commodity Type</option>
+                                    <option value="a">A</option>
+                                    <option value="b">B</option>
+                                    <option value="c">C</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="col-form-label">Weight</label>
+                                <div class="input-group">
+                                    <input id="weight-quote" type="text" class="form-control w-50"
+                                           placeholder="Weight">
+                                    <span class="input-group-text">Kg</span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="col-form-label">Count</label>
+                                <div class="input-group">
+                                    <input id="count-quote" type="text" class="form-control w-50"
+                                           placeholder="Weight">
+                                    <!--                                    <span class="input-group-text">Kg</span>-->
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="row g-3 align-items-end mb-3 ">
+                            <div class="col-lg-3">
+                                <label class="col-form-label">Volume</label>
+                                <div class="input-group">
+                                    <input id="volume-quote" type="text" class="form-control w-50"
+                                           placeholder="0">
+                                    <span class="input-group-text">m³</span>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-1 mb-2 d-flex justify-content-center align-items-center">
+                                <span class="text-center">or</span>
+                            </div>
+                            <div class="col-lg-2">
+                                <label class="col-form-label">Size</label>
+
+                                <div class="input-group">
+                                    <input type="text" class="form-control w-50" placeholder="Length">
+                                    <span class="input-group-text">cm</span>
+
+                                </div>
+                            </div>
+
+                            <div class="col">
+
+                                <div class="input-group">
+                                    <input type="text" class="form-control w-50" placeholder="Width">
+                                    <span class="input-group-text">cm</span>
+                                </div>
+                            </div>
+                            <div class="col">
+
+                                <div class="input-group">
+                                    <input type="text" class="form-control w-50" placeholder="Hight">
+                                    <span class="input-group-text">cm</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="add-item">
+                        <i class="fas fa-plus-circle"></i> Add Another Item
+                    </div>
+                    <div class="buttons">
+                        <button onclick="rates2(event, 'quote2');" class="back"><i
+                                class="fas fa-arrow-left"></i>
+                            Back
+                        </button>
+
+                        <button onclick="rates3(event, 'quote4');">Next <i class="fas fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote4 -->
+            <div id="quote4" class="content-section">
+                <div class="containerr">
+                    <div class="headerr">Get your quotes</div>
+                    <div class="tabss-wrapper">
+                        <div class="tabss">
+                            <div class="tabr active">Origin and Destination</div>
+                            <div class="tabr active">Shipment Details</div>
+                            <div class="tabr active">Select Services</div>
+                            <div class="tabr">Add-Ons</div>
+                            <div class="tabr">Your Contact Details</div>
+                        </div>
+                    </div>
+
+                    <div class="container-1">
+                        <div class="headerrr-1">
+                            <select>
+                                <option>Shipment Date</option>
+                                <option>01 Feb 2024</option>
+                            </select>
+                            <a href="#">Save Shipment</a>
+                        </div>
+                        <div class="summary">
+                            <h2>Summary</h2>
+                            <div class="details">
+                                <div>
+                                    <p>Pieces</p>
+                                    <p class="value">2</p>
+                                </div>
+                                <div>
+                                    <p>Actual Weight</p>
+                                    <p class="value">40 kg</p>
+                                </div>
+                                <div>
+                                    <p>Total Volume</p>
+                                    <p class="value">1.05 m³</p>
+                                </div>
+                                <div>
+                                    <p>Est. Chargeable Weight</p>
+                                    <p class="value">40 kg</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rates">
+                            <p><b>Like the rates?</b></p>
+                            <p>Sign up as a business partner today and enjoy better rates when you ship with us
+                                in
+                                weekly
+                                terms and conditions apply</p>
+                            <button>Sign Up Now</button>
+                        </div>
+                        <div class="services3">
+                            <h3>Select Services</h3>
+                            <div class="row mt-3">
+                                <div class="col text-center">
+                                    <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"
+                                         width="50"/>
+
+                                </div>
+                                <div class="col">
+
+                                    <div class="info">
+                                        <div>
+                                            <p><b>Service</b></p>
+                                            <p>Express</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+
+                                        <div>
+                                            <p><b>Latest Drop Off Time</b></p>
+                                            <p>Thu, 22 Feb 2024 23:59:59</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+
+                                        <div>
+                                            <p><b>Estimated Delivery</b></p>
+                                            <p>Mon, 1 April 2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+                                        <p><b>Starts from</b></p>
+                                        <p>1.888.000 IDR</p>
+
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <!-- Konten Kiri -->
+                                    <div>
+
+                                    </div>
+
+                                    <!-- Link di Sebelah Kanan -->
+                                    <div>
+                                        <a href="#" class="quote-link">Get a Quote →</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col text-center">
+                                    <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"
+                                         width="50"/>
+
+                                </div>
+                                <div class="col">
+
+                                    <div class="info">
+                                        <div>
+                                            <p><b>Service</b></p>
+                                            <p>Normal</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+
+                                        <div>
+                                            <p><b>Latest Drop Off Time</b></p>
+                                            <p>Thu, 22 Feb 2024 23:59:59</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+
+                                        <div>
+                                            <p><b>Estimated Delivery</b></p>
+                                            <p>Mon, 1 April 2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+                                        <p><b>Starts from</b></p>
+                                        <p>1.888.000 IDR</p>
+
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <!-- Konten Kiri -->
+                                    <div>
+
+                                    </div>
+
+                                    <!-- Link di Sebelah Kanan -->
+                                    <div>
+                                        <a href="#" class="quote-link">Get a Quote →</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col text-center">
+                                    <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"
+                                         width="50"/>
+
+                                </div>
+                                <div class="col">
+
+                                    <div class="info">
+                                        <div>
+                                            <p><b>Service</b></p>
+                                            <p>By Sea</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+
+                                        <div>
+                                            <p><b>Latest Drop Off Time</b></p>
+                                            <p>Thu, 22 Feb 2024 23:59:59</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+
+                                        <div>
+                                            <p><b>Estimated Delivery</b></p>
+                                            <p>Mon, 1 April 2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+                                        <p><b>Starts from</b></p>
+                                        <p>1.888.000 IDR</p>
+
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <!-- Konten Kiri -->
+                                    <div>
+                                        <span>Some Text Content</span>
+                                    </div>
+
+                                    <!-- Link di Sebelah Kanan -->
+                                    <div>
+                                        <a href="#" class="quote-link">Get a Quote →</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--                        <div class="service3-item">-->
+                            <!--                            <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"-->
+                            <!--                                 width="50"/>-->
+                            <!--                            <div class="info">-->
+                            <!--                                <div>-->
+                            <!--                                    <p><b>Service</b></p>-->
+                            <!--                                    <p>Express</p>-->
+                            <!--                                </div>-->
+                            <!--                                <div>-->
+                            <!--                                    <p><b>Latest Drop Off Time</b></p>-->
+                            <!--                                    <p>Thu, 22 Feb 2024 23:59:59</p>-->
+                            <!--                                </div>-->
+                            <!--                                <div>-->
+                            <!--                                    <p><b>Estimated Delivery</b></p>-->
+                            <!--                                    <p>Mon, 1 April 2024</p>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="price">Starts from 1.888.000 IDR</div>-->
+                            <!--                            <a href="#" class="quote-link">Get a Quote →</a>-->
+                            <!--                        </div>-->
+
+                            <!--                        <div class="service3-item">-->
+                            <!--                            <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"-->
+                            <!--                                 width="50"/>-->
+                            <!--                            <div class="info">-->
+                            <!--                                <div>-->
+                            <!--                                    <p><b>Service</b></p>-->
+                            <!--                                    <p>Express</p>-->
+                            <!--                                </div>-->
+                            <!--                                <div>-->
+                            <!--                                    <p><b>Latest Drop Off Time</b></p>-->
+                            <!--                                    <p>Thu, 22 Feb 2024 23:59:59</p>-->
+                            <!--                                </div>-->
+                            <!--                                <div>-->
+                            <!--                                    <p><b>Estimated Delivery</b></p>-->
+                            <!--                                    <p>Mon, 1 April 2024</p>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="price">Starts from 1.888.000 IDR</div>-->
+                            <!--                            <a href="#" class="quote-link">Get a Quote →</a>-->
+                            <!--                        </div>-->
+
+                            <!--                        <div class="service3-item">-->
+                            <!--                            <img alt="Service3 icon" height="50" src="assets/images/about/ship_quote.png"-->
+                            <!--                                 width="50"/>-->
+                            <!--                            <div class="info">-->
+                            <!--                                <div>-->
+                            <!--                                    <p><b>Service</b></p>-->
+                            <!--                                    <p>Express</p>-->
+                            <!--                                </div>-->
+                            <!--                                <div>-->
+                            <!--                                    <p><b>Latest Drop Off Time</b></p>-->
+                            <!--                                    <p>Thu, 22 Feb 2024 23:59:59</p>-->
+                            <!--                                </div>-->
+                            <!--                                <div>-->
+                            <!--                                    <p><b>Estimated Delivery</b></p>-->
+                            <!--                                    <p>Mon, 1 April 2024</p>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
+                            <!--                            <div class="details">-->
+                            <!--                                <div class="price">Starts from 1.888.000 IDR</div>-->
+                            <!--                            </div>-->
+                            <!--                            <a href="#" class="quote-link">Get a Quote →</a>-->
+                            <!--                        </div>-->
+
+                            <div class="footer-1">
+                                <li>Please note that this quote is an estimate only. Price and time quoted are
+                                    indicative
+                                    only
+                                    and might differ from the actual booking depending on the information that you
+                                    provide.
+                                </li>
+                                <li>Rates shown here may be different than the actual charges for your shipment as it
+                                    might
+                                    not
+                                    include duties, taxes, custom charges, storage fees or any other surcharges and
+                                    fees.
+                                </li>
+                                <li>Log in to your account to see your account-specific rates and services.</li>
+                                <br>
+                                <p>
+                                    <a href="#">Print / Download Rates</a>
+                                </p>
+                            </div>
+
+                            <div class="buttons3">
+                                <button class="back" onclick="rates2(event, 'rates2');"><i
+                                        class="fas fa-arrow-left"></i>
+                                    Back
+                                </button>
+
+                                <button onclick="rates4(event, 'rates4');">Continue Booking <i
+                                        class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="services3">
+                            <h3>Select Services</h3>
+                            <div class="row mt-3">
+                                <div class="col text-center">
+                                    <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"
+                                         width="50"/>
+
+                                </div>
+                                <div class="col">
+
+                                    <div class="info">
+                                        <div>
+                                            <p><b>Service</b></p>
+                                            <p>Express</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+
+                                        <div>
+                                            <p><b>Latest Drop Off Time</b></p>
+                                            <p>Thu, 22 Feb 2024 23:59:59</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+
+                                        <div>
+                                            <p><b>Estimated Delivery</b></p>
+                                            <p>Mon, 1 April 2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+                                        <p><b>Starts from</b></p>
+                                        <p>1.888.000 IDR</p>
+
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <!-- Konten Kiri -->
+                                    <div>
+
+                                    </div>
+
+                                    <!-- Link di Sebelah Kanan -->
+                                    <div>
+                                        <a href="#" class="quote-link">Get a Quote →</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col text-center">
+                                    <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"
+                                         width="50"/>
+
+                                </div>
+                                <div class="col">
+
+                                    <div class="info">
+                                        <div>
+                                            <p><b>Service</b></p>
+                                            <p>Normal</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+
+                                        <div>
+                                            <p><b>Latest Drop Off Time</b></p>
+                                            <p>Thu, 22 Feb 2024 23:59:59</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+
+                                        <div>
+                                            <p><b>Estimated Delivery</b></p>
+                                            <p>Mon, 1 April 2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+                                        <p><b>Starts from</b></p>
+                                        <p>1.888.000 IDR</p>
+
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <!-- Konten Kiri -->
+                                    <div>
+
+                                    </div>
+
+                                    <!-- Link di Sebelah Kanan -->
+                                    <div>
+                                        <a href="#" class="quote-link">Get a Quote →</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col text-center">
+                                    <img alt="Service3 icon" height="50" src="assets\images\about\ship_quote.png"
+                                         width="50"/>
+
+                                </div>
+                                <div class="col">
+
+                                    <div class="info">
+                                        <div>
+                                            <p><b>Service</b></p>
+                                            <p>By Sea</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+
+                                        <div>
+                                            <p><b>Latest Drop Off Time</b></p>
+                                            <p>Thu, 22 Feb 2024 23:59:59</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+
+                                        <div>
+                                            <p><b>Estimated Delivery</b></p>
+                                            <p>Mon, 1 April 2024</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="info">
+                                        <p><b>Starts from</b></p>
+                                        <p>1.888.000 IDR</p>
+
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <!-- Konten Kiri -->
+                                    <div>
+                                        <span>Some Text Content</span>
+                                    </div>
+
+                                    <!-- Link di Sebelah Kanan -->
+                                    <div>
+                                        <a href="#" class="quote-link">Get a Quote →</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-1">
+                            <li>Please note that this quote is an estimate only. Price and time quoted are
+                                indicative
+                                only
+                                and might differ from the actual booking depending on the information that you
+                                provide.
+                            </li>
+                            <li>Rates shown here may be different than the actual charges for your shipment as
+                                it
+                                might
+                                not
+                                include duties, taxes, custom charges, storage fees or any other surcharges and
+                                fees.
+                            </li>
+                            <li>Log in to your account to see your account-specific rates and services.</li>
+                            <br>
+                            <p>
+                                <a href="#">Email Quote</a> |
+                                <a href="#">Copy Link</a> |
+                                <a href="#">Print / Download Quote</a>
+                            </p>
+                        </div>
+
+                        <div class="buttons">
+                            <button onclick="rates2(event, 'quote3');" class="back"><i
+                                    class="fas fa-arrow-left"></i>
+                                Back
+                            </button>
+
+                            <button onclick="rates3(event, 'quote5');">Next <i class="fas fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote5 -->
+            <div id="quote5" class="content-section">
+                <div class="containerr">
+                    <div class="headerr">Get your quotes</div>
+                    <div class="tabss-wrapper">
+                        <div class="tabss">
+                            <div class="tabr active">Origin and Destination</div>
+                            <div class="tabr active">Shipment Details</div>
+                            <div class="tabr active">Select Services</div>
+                            <div class="tabr active">Add-Ons</div>
+                            <div class="tabr">Your Contact Details</div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid">
+                        <h1>Select Add-Ons (Optional)</h1>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th class="price">Starts from</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Insurance</td>
+                                <td class="price">8.293.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Climate Impact - GoGreen</td>
+                                <td class="price">200.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Inspection Services</td>
+                                <td class="price">500.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Certifications</td>
+                                <td class="price">200.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Customs Clearance</td>
+                                <td class="price">5.533.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Trade, Logistics and Inventory</td>
+                                <td class="price">10.000.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Finance</td>
+                                <td class="price">433.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Delivery Confirmation</td>
+                                <td class="price">50.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Signature Required</td>
+                                <td class="price">80.000 IDR</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox"><input type="checkbox"></td>
+                                <td>Additional Handling (Unusually shaped or irregular packaging)</td>
+                                <td class="price">700.000 IDR</td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                    <div class="buttons">
+                        <button onclick="rates3(event, 'quote4');" class="back"><i
+                                class="fas fa-arrow-left"></i>
+                            Back
+                        </button>
+
+                        <button onclick="rates3(event, 'quote6');">Next <i class="fas fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote6 -->
+            <div id="quote6" class="content-section tab-pane">
+                <div class="containerr">
+                    <div class="headerr">Get your quotes</div>
+                    <div class="tabss-wrapper">
+                        <div class="tabss">
+                            <div class="tabr active">Origin and Destination</div>
+                            <div class="tabr active">Shipment Details</div>
+                            <div class="tabr active">Select Services</div>
+                            <div class="tabr active">Add-Ons</div>
+                            <div class="tabr active">Your Contact Details</div>
+                        </div>
+                    </div>
+
+                    <div class="containerrr-1">
+                        <div class="container-contact">
+                            <div class="row g-2">
+
+                                <div class="col form-section p-3">
+                                    <h2>Shipper</h2>
+                                    <form>
+                                        <div class="row mb-4">
+                                            <div class="col">
+                                                <label for="reg-firstname" class="form-label">First Name</label>
+                                                <input type="text" id="reg-firstname" class="form-control"
+                                                       placeholder="Enter first name"
+                                                       name="firstname">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-lastname" class="form-label">Last Name</label>
+                                                <input type="text" id="reg-lastname" class="form-control"
+                                                       placeholder="Enter lastname"
+                                                       name="lastname">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col">
+                                                <label for="reg-countrycode" class="form-label">Country Code</label>
+                                                <input type="text" id="reg-countrycode" class="form-control"
+                                                       placeholder="Enter country code"
+                                                       name="countrycode">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-phone" class="form-label">Phone</label>
+                                                <input type="text" id="reg-phone" class="form-control"
+                                                       placeholder="Enter phone number"
+                                                       name="phone">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-extension" class="form-label">Extension</label>
+                                                <input type="text" id="reg-extension" class="form-control"
+                                                       placeholder="Enter extension"
+                                                       name="extension">
+                                            </div>
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="reg-email"
+                                                   aria-describedby="email">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-country" class="form-label">Country/Territory</label>
+                                            <input type="text" class="form-control" id="reg-country"
+                                                   aria-describedby="country">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-company-name" class="form-label">Company Name</label>
+                                            <input type="text" class="form-control" id="reg-company-name"
+                                                   aria-describedby="companyname">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-address-line1" class="form-label">Address Line 1</label>
+                                            <input type="text" class="form-control" id="reg-address-line1"
+                                                   aria-describedby="addressline1">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-address-line2" class="form-label">Address Line 2</label>
+                                            <input type="text" class="form-control" id="reg-address-line2"
+                                                   aria-describedby="addressline2">
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col">
+                                                <label for="reg-postalcode" class="form-label">Postal Code</label>
+                                                <input type="text" id="reg-postalcode" class="form-control"
+                                                       placeholder="Enter postal code"
+                                                       name="postalcode">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-city" class="form-label">City</label>
+                                                <input type="text" id="reg-city" class="form-control"
+                                                       placeholder="Enter city"
+                                                       name="city">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-state" class="form-label">State</label>
+                                                <input type="text" id="reg-state" class="form-control"
+                                                       placeholder="Enter extension"
+                                                       name="state">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col form-section p-3">
+                                    <h2>Consignee</h2>
+                                    <form>
+                                        <div class="row mb-4">
+                                            <div class="col">
+                                                <label for="reg-firstname" class="form-label">First Name</label>
+                                                <input type="text" id="reg-firstname" class="form-control"
+                                                       placeholder="Enter first name"
+                                                       name="firstname">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-lastname" class="form-label">Last Name</label>
+                                                <input type="text" id="reg-lastname" class="form-control"
+                                                       placeholder="Enter lastname"
+                                                       name="lastname">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col">
+                                                <label for="reg-countrycode" class="form-label">Country Code</label>
+                                                <input type="text" id="reg-countrycode" class="form-control"
+                                                       placeholder="Enter country code"
+                                                       name="countrycode">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-phone" class="form-label">Phone</label>
+                                                <input type="text" id="reg-phone" class="form-control"
+                                                       placeholder="Enter phone number"
+                                                       name="phone">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-extension" class="form-label">Extension</label>
+                                                <input type="text" id="reg-extension" class="form-control"
+                                                       placeholder="Enter extension"
+                                                       name="extension">
+                                            </div>
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="reg-email"
+                                                   aria-describedby="email">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-country" class="form-label">Country/Territory</label>
+                                            <input type="text" class="form-control" id="reg-country"
+                                                   aria-describedby="country">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-company-name" class="form-label">Company Name</label>
+                                            <input type="text" class="form-control" id="reg-company-name"
+                                                   aria-describedby="companyname">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-address-line1" class="form-label">Address Line 1</label>
+                                            <input type="text" class="form-control" id="reg-address-line1"
+                                                   aria-describedby="addressline1">
+                                        </div>
+                                        <div class="mb-4">
+                                            <label for="reg-address-line2" class="form-label">Address Line 2</label>
+                                            <input type="text" class="form-control" id="reg-address-line2"
+                                                   aria-describedby="addressline2">
+                                        </div>
+                                        <div class="row mb-4">
+                                            <div class="col">
+                                                <label for="reg-postalcode" class="form-label">Postal Code</label>
+                                                <input type="text" id="reg-postalcode" class="form-control"
+                                                       placeholder="Enter postal code"
+                                                       name="postalcode">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-city" class="form-label">City</label>
+                                                <input type="text" id="reg-city" class="form-control"
+                                                       placeholder="Enter city"
+                                                       name="city">
+                                            </div>
+                                            <div class="col">
+                                                <label for="reg-state" class="form-label">State</label>
+                                                <input type="text" id="reg-state" class="form-control"
+                                                       placeholder="Enter extension"
+                                                       name="state">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button onclick="rates3(event, 'quote5');" class="back"><i
+                                class="fas fa-arrow-left"></i>
+                            Back
+                        </button>
+
+                        <button onclick="switchTab('quote7');">Submit <i class="fas fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote7 -->
+            <div id="quote7" class="content-section tab-pane ">
+                <div class="row cta-ca quote">
+                    <div class="col">
+                        <h1>hank you for your business!<br>
+                            The quote you requested has been sent to Shipper’s email.</h1>
+                    </div>
+                    <div class="col mt-auto">
+                        <button class="float-end" onclick="rates2(event, 'quote2');" style="font-size:  1.25rem;">Get Another Quote →</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- services -->
+<div class="services-container">
+    <div class="services-content">
+        <h1>Our Services</h1>
+        <div class="services-text mb-5">
+
+            <div class="col-lg-9 ">
+                <p>With the rapid advancement of technology and the rise of digitalization across all sectors,
+                    the
+                    needs
+                    of
+                    communities have significantly evolved, particularly in the distribution industry. Freight
+                    forwarding
+                    services now play a crucial role in meeting these growing demands.</p>
+                <p>Today, the freight forwarding sector is becoming more dynamic, with companies continuously
+                    innovating
+                    to
+                    provide better and more efficient services.</p>
+                <p>PT. KEMASINDO is a prime example of this progress. We are one of the leading freight
+                    forwarding
+                    company,
+                    we offer comprehensive services across land, sea, and air. Supporting the nation's economy
+                    through
+                    Export, Import, and Domestic trade.</p>
+
+            </div>
+            <div class="services-illus float-end">
+                <img class="img-fluid float-end" src="assets\images\home\logo-service.png" alt="">
+            </div>
+            <a href="services.html" class="view-services-btn">View All Services</a>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- banner -->
+<section class="banner align-content-center">
+    <div class="row m-0 g-5">
+        <div class="col-lg-4 banner-content align-content-start">
+            <h1>Great Pricing<br>Anytime, Anywhere</h1>
+        </div>
+        <div class="col-lg-6 cta-card p-4">
+            <p>Start your logistic journey with us and <br> experience the smooth and trusted flow from end <br>
+                to end
+                on
+                one integrated system.</p>
+            <div class="d-flex justify-content-between ">
+                <p class="mb-0">Great Discounts Await!</p>
+                <a href="register.html" class="button">Sign Up →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- features -->
+<section class="container-fluid">
+    <!--    <div class="row">-->
+    <!--        <div class="col-lg-4 p-0">-->
+    <!--            <img src="assets/images/news/kapal.jpg" alt="" class="img-fluid feature-card" height="3456" width="5184">-->
+    <!--            <div class="feature-content">-->
+    <!--                <h2>Fast Worldwide <br> Delivery</h2>-->
+    <!--                <br>-->
+    <!--                <p>From Europe to Australia, by <br> air or sea? We offer fast, <br> reliable and accurate <br>-->
+    <!--                    worldwide-->
+    <!--                    delivery directly to <br> your doors, factory and <br> warehouses.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="col-lg-4 p-0">-->
+    <!--            <img src="assets/images/news/texas.jpg" alt="" class="img-fluid feature-card">-->
+    <!--            <div class="feature-content">-->
+    <!--                <h2>End-to-end <br> Solutions Available</h2>-->
+    <!--                <br>-->
+    <!--                <p>From 2015 Trucking offers <br> new service - we are now <br> offering end-to-end solutions <br> using-->
+    <!--                    multiple transportation <br> means and covering all supply <br> chain from the origin to the <br>-->
+    <!--                    destination.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="col-lg-4 feature-card">-->
+    <!--            <img src="assets/images/news/kardus.jpg" alt="" class="img-fluid feature-card">-->
+    <!--            <div class="feature-content">-->
+    <!--                <h2>Safety and <br> Compliance</h2>-->
+    <!--                <br>-->
+    <!--                <p>Safety of your cargo is one of <br> our top priorities. Every <br> package is handled with most <br>-->
+    <!--                    care-->
+    <!--                    by our trained and high <br> skilled personnel. You can be <br> sure that your cargo will travel-->
+    <!--                    <br>-->
+    <!--                    and arrive safely.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <div class="row no-gutters">
+        <div class="col-lg-4 p-0">
+            <div class="card">
+                <img alt="Image of a large cargo ship with cranes in a port" class="card-img" height="1000"
+                     src="assets/images/news/kapal.jpg" width="600"/>
+                <div class="card-img-overlay p-4">
+                    <div class="m-5">
+                        <h5 class="card-title">
+                            Fast Worldwide Delivery
+                        </h5>
+                        <p class="card-text mt-5">
+                            From Europe to Australia, by air or sea? We offer fast, reliable, and accurate
+                            worldwide
+                            delivery directly to your doors, factory and warehouses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col p-0">
+            <div class="card">
+                <img alt="Image of a wooden map of Africa on a corrugated metal background" class="card-img"
+                     height="1000" src="assets/images/news/texas.jpg" width="600"/>
+                <div class="card-img-overlay">
+                    <div class="m-5">
+
+                        <h5 class="card-title">
+                            End-to-end Solution Available
+                        </h5>
+                        <p class="card-text mt-5">
+                            From 2015 Trucking offers new service - we are now offering end-to-end solutions
+                            using
+                            multiple
+                            transportation means and covering all supply chain from the origin to the
+                            destination.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 p-0">
+            <div class="card">
+                <img alt="Image of a person sealing a cardboard box with tape" class="card-img" height="1000"
+                     src="assets/images/news/kardus.jpg" width="600"/>
+                <div class="card-img-overlay">
+                    <div class="m-5">
+
+                        <h5 class="card-title">
+                            Safety and Compliance
+                        </h5>
+                        <p class="card-text mt-5">
+                            Safety of your cargo is one of our top priorities. Every package is handled with
+                            most care
+                            by
+                            our trained and high skilled personnel. You can be sure that your cargo will travel
+                            and
+                            arrive
+                            safely.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- hiring -->
+<section class="careers">
+    <div class="careers-content">
+        <h1><strong> We are <span>Hiring</span>!</strong></h1>
+        <p>Explore available jobs and join our team.</p>
+        <a href="careers.html" class="button sub-text ">Explore Jobs →</a>
+    </div>
+</section>
+
+<!-- news -->
+<div class="container-fluid d-flex">
+    <div class="horizontal-scrollable">
+        <div class="col h-item h-display">
+            <!-- news 1 -->
+            <div class="news-card">
+                <img alt="Person holding a tablet" src="assets\images\news\buku.png" height="350"/>
+                <div class="news-content ">
+                    <div>
+                        <div class="news-date">
+                            10 NOV 2023 | SHIPMENT, LATEST NEWS
+                        </div>
+                        <div class="news-title">
+                            How to Secure Your Products for Shipment
+                        </div>
+                        <div class="news-description overflow-auto">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, ipsum eget
+                            posuere
+                            imperdiet,
+                            condimentum gravida mi enim vel sapien.
+                        </div>
+                    </div>
+                    <div>
+                        <a class="read-more mt-4 justify-content-end" href="#">
+                            Read More
+                            <i class="fas fa-arrow-right">
+                            </i>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col h-item h-display">
+            <!-- news 2 -->
+            <div class="news-card">
+                <img alt="Shipping containers and cranes" height="800" src="assets\images\news\texas.jpg"
+                     width="600"/>
+                <div class="news-content">
+                    <div class="news-date">
+                        10 NOV 2023 | SHIPMENT, LATEST NEWS
+                    </div>
+                    <div class="news-title">
+                        Krisis Pengiriman Laut Merah: Mimpi Buruk Baru untuk Perdagangan Asia-Eropa
+                    </div>
+                    <div class="news-description">
+                        Para pengirim barang memperingatkan pelanggan bahwa permintaan pada perdagangan laut
+                        Asia-Eropa...
+                    </div>
+                    <a class="read-more mt-4  justify-content-end" href="articles2.html">
+                        Read More
+                        <i class="fas fa-arrow-right">
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col h-item h-display">
+            <!-- news 3 -->
+            <div class="news-card">
+                <img alt="Shipping containers and cranes" height="200" src="assets\images\news\container.jpg"
+                     width="300"/>
+                <div class="news-content">
+                    <div class="news-date">
+                        05 OCT 2024 | SHIPMENT, LATEST NEWS
+                    </div>
+                    <div class="news-title">
+                        Tips Menggunakan Jasa Forwarder dengan Aman, Cepat dan Murah
+                    </div>
+                    <div class="news-description">
+                        Semakin berkembangnya teknologi, semakin banyak pula bisnis jasa pengiriman barang di
+                        dunia.
+                    </div>
+                    <a class="read-more mt-4 justify-content-end" href="articles1.html">
+                        Read More
+                        <i class="fas fa-arrow-right">
+                        </i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col h-item h-display">
+            <!-- view all -->
+            <div class="sidebar">
+                <h1>
+                    Latest <br> News
+                </h1>
+                <a class="view-all" href="news.html">
+                    View All
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- subcribe -->
+<section class="subscribe align-items-center">
+    <div id="subr1" class="subs-content active align-items-center px-3 ">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Always get the latest news delivered straight to your inbox.</p>
+        <input class="mt-0" type="email" placeholder="Enter your email" style="width: 400px;"/>
+        <button onclick="subrs('subr2')">Subscribe</button>
+    </div>
+    <!--    <div id="subr2" class="subs-content ">-->
+    <!--        <img src="assets\images\home\Subscribe-Success.png" alt="">-->
+    <!--        <h2>Thank you for subscribing!</h2>-->
+    <!--        <p>Check your inbox soon for great emails from KECELINE Group</p>-->
+    <!--    </div>-->
+</section>
+
+<!-- footer -->
+<!--<div class="background-20">-->
+<!--    <div class="lis-putih">-->
+<!--        <div class="text-2">-->
+<!--            <b>-->
+<!--                <h10>Ship with us</h10>-->
+<!--            </b>-->
+<!--        </div>-->
+<!--        <div class="row align-content-center align-items-center">-->
+
+<!--            <div class="offset-lg-3 col-lg-3">-->
+<!--                <a href="quote.html">-->
+<!--                    <img src="assets\images\footer\quote.png" alt="Logo" height="60px" width="auto">-->
+<!--                    <p class="img-text-33 mt-3"><b>Get a Quote</b></p>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--            <div class=" col-lg-3">-->
+<!--                <a href="register.html">-->
+<!--                    <div class="background-22">-->
+<!--                        <img src="assets\images\footer\task.png" alt="Logo" height="60px" width="auto">-->
+<!--                        <p class="img-text-33 mt-3"><b>Open an Account</p></b>-->
+<!--                    </div>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+<!--    </div>-->
+<!--</div>-->
+
+<div class="background-20">
+    <div class="lis-putih">
+        <div class="text-ab-2">
+            <b>
+                <h10>Ship with us</h10>
+            </b>
+        </div>
+        <div class="row g-3 justify-content-center ">
+            <div class="col-lg-3 ">
+                <a href="quote.html">
+                    <div class="background-ab-22">
+                        <img src="assets\images\footer\quote.png" alt="Logo" height="60px" width="auto">
+                        <p class="img-text-33 mt-3"><b>Get a Quote</b></p>
+                    </div>
+                </a>
+
+            </div>
+            <div class="col-lg-3 ">
+
+                <a href="register.html">
+                    <div class="background-22">
+                        <img src="assets\images\footer\task.png" alt="Logo" height="60px" width="auto">
+                        <p class="img-text-33 mt-3"><b>Open an Account</b></p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- quick links  -->
+<div class="footer">
+    <div class="row d-flex">
+        <div class="col-lg-4 mb-3">
+            <div class="img-footer">
+                <img src="assets/images/navbar/logo-perusahaan.png" alt="Logo" height="70px" width="150px">
+            </div>
+            <p>Get the latest news about<br>shipment, cargo and delivery.</p>
+            <div class="form-group-inline ">
+                <input type="text" class="form-control" placeholder="Email">
+                <button class="btn btn-success" type="button" id="inputGroupFileAddon04">Subscribe</button>
+            </div>
+
+        </div>
+        <div class="col-lg">
+            <div class="row d-flex">
+                <div class="col">
+                    <h4>Quick Links</h4>
+                    <a href="about.html">About</a>
+                    <a href="news.html">News</a>
+                    <a href="office.html">Our Offices</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="register.html">New Customer Center</a>
+
+                </div>
+                <div class="col">
+                    <h4>Services</h4>
+                    <p>Sea Freight</p>
+                    <p>Air Freight</p>
+                    <p>Rail Transport</p>
+                    <p>Land Transport</p>
+                    <p>3PL</p>
+                </div>
+            </div>
+            <hr class="horizontal-line">
+
+            <div class="col">
+                <div class="row">
+                    <!-- Terms and Privacy Policy Links -->
+                    <div class="terms col">
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                    <!-- Social Media Icons Positioned Horizontally -->
+                    <div class="footer-social col">
+                        <a href="#"><img src="assets\images\footer\instagram.png" alt="Instagram" height="20px"
+                                         width="20px"></a>
+                        <a href="#"><img src="assets\images\footer\facebook.png" alt="Facebook" height="20px"
+                                         width="20px"></a>
+                        <a href="#"><img src="assets\images\footer\twitterx.png" alt="X" height="16px"
+                                         width="16px"></a>
+                        <a href="#"><img src="assets\images\footer\linkedin.png" alt="LinkedIn" height="20px"
+                                         width="20px"></a>
+                        <a href="#"><img src="assets\images\footer\youtube.png" alt="YouTube" height="15px"
+                                         width="20px"></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<!-- chat -->
+<a href="#"></a>
+<div class="chat-button">
+    <i class="fas fa-comments"></i>
+</div>
+</a>
+
+
+<script type="text/javascript" src="js/home.js"></script>
+<script>
+    // Get the modal
+    var modal = document.getElementById("modal1");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn1");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close-btn")[0];
+    var cancl = document.getElementsByClassName("cancel-button")[0];
+
+    var modal2 = document.getElementById("modal2");
+    var btn2 = document.getElementById("myBtn2");
+    var cancl2 = document.getElementsByClassName("cancel-button")[1];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    cancl.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    btn2.onclick = function () {
+        modal2.style.display = "block";
+        modal.style.display = "none";
+    }
+
+
+    cancl2.onclick = function () {
+        modal2.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal2) {
+            modal2.style.display = "none";
+        }
+    }
+</script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleButton = document.querySelector('.toggle-timeline');
+        const timelineItems = document.querySelectorAll('.timeline-item:not(:first-child)');
+        let isExpanded = false;
+
+        // Initially hide all timeline items except the first one
+        timelineItems.forEach(item => {
+            item.classList.add('hidden');
+        });
+
+        toggleButton.addEventListener('click', function () {
+            isExpanded = !isExpanded;
+
+            // Toggle the expanded class for button styling
+            this.classList.toggle('expanded');
+
+            // Update button text
+            const buttonText = this.querySelector('span');
+            buttonText.textContent = isExpanded ? 'Hide Timeline' : 'View Timeline';
+
+            // Toggle visibility of timeline items
+            timelineItems.forEach(item => {
+                item.classList.toggle('hidden');
+            });
+        });
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+:root {
+    --green-color: #154203;
+    --light-green-color: #249300;
+    --grey-color: #7b7b7b;
+    --light-grey-color: #9d9d9d;
+    --red-color: #E12237;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* navbar */
+/*.navbar {*/
+/*    display: flex;*/
+/*    justify-content: left;*/
+/*    position: fixed;*/
+/*    align-items: center;*/
+/*    width: 100%;*/
+/*    gap: 1.5rem;*/
+/*    padding: 0.5rem 5%;*/
+/*    background: white;*/
+/*    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.logo {*/
+/*    background: var(--green-color);*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    color: white;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.logo img {*/
+/*    width: auto;*/
+/*    height: 64px;*/
+/*    object-fit: contain;*/
+/*    object-position: center;*/
+/*    margin: 0px 0px 0px 0px;*/
+/*}*/
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a, .login-btn {
+    text-decoration: none;
+    color: var(--grey-color);
+    font-size: 0.9rem;
+}
+
+.tabs a {
+    text-decoration: none;
+    color: var(--grey-color);
+    font-size: 0.9rem;
+}
+
+.vl {
+    border-left: 1px solid var(--grey-color);
+    margin-left: 20vw;
+    height: 2rem;
+}
+
+.login-btn {
+    border: none;
+    background: none;
+    color: var(--grey-color);
+    margin-left: 0;
+    cursor: pointer;
+}
+
+/* news */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15vh 0;
+}
+
+header {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+header p {
+    font-size: 16px;
+    color: #666;
+}
+
+.navbars {
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.navbars a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 8px;
+    border-radius: 5px;
+}
+
+.navbars a.active {
+    background-color: #006400;
+    color: #fff;
+}
+
+/*.subscribe {*/
+/*    display: flex;*/
+/*    align-items: right;*/
+/*    margin-left: 300px;*/
+/*}*/
+
+/*.subscribe p {*/
+/*    padding-top: 5px;*/
+/*    font-size: 16px;*/
+/*    width: 180px;*/
+/*    color: #666;*/
+/*}*/
+
+/*.subscribe input[type="email"] {*/
+/*    padding: 8px;*/
+/*    border: 1px solid #ddd;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/*.subscribe button {*/
+/*    background-color: #006400;*/
+/*    color: white;*/
+/*    border: none;*/
+/*    padding: 8px 15px;*/
+/*    margin-left: 5px;*/
+/*    border-radius: 5px;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/* result */
+.result {
+    /*max-width: 1200px;*/
+    /*padding: 10vh;*/
+    /*margin-top: -10vh;*/
+}
+
+.result h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.search-form {
+    margin-bottom: 2rem;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 40vw;
+}
+
+.search-form button {
+    background-color: #006400;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 15vw;
+}
+
+.filters {
+    line-height: 2.5rem;
+
+}
+
+.filters a {
+    text-decoration: none;
+    color: var(--green-color);
+}
+
+.filters h3 {
+    font-size: 1.5rem;
+}
+
+.result1 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.result1 p {
+    font-size: 1rem;
+    margin-bottom: 5rem;
+}
+
+
+/* subcribe */
+.subscribe {
+    display: flex;
+    background-image: url('../assets/images/home/kapal-cargo-view.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    height: 420px;
+
+}
+
+.subs-content {
+    background-color: #fff;
+    width: 600px;
+    height: 200px;
+    padding: 1rem;
+    justify-content: center;
+    text-align: center;
+    border-radius: 20px;
+    color: #000;
+    display: none;
+
+}
+
+.subs-content img {
+    height: 80px;
+}
+
+.subs-content.active {
+    display: block;
+}
+
+.subscribe h2 {
+    margin-top: 10px;
+    font-size: 2.2rem;
+}
+
+.subscribe input {
+    margin-top: 2rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--grey-color);
+    border-radius: 4px;
+    width: 300px;
+}
+
+.subscribe button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--green-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
