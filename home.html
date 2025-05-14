@@ -19,13 +19,13 @@
 <body>
 
 <nav class="navbar navbar-expand-lg bg-transparent">
-    <div class="container-fluid px-5 py-3">
-        <div class="logo mx-5"><img src="assets/images/navbar/logo-perusahaan.png" alt=""></div>
+    <div class="container py-3">
+        <div class="logo"><img src="assets/images/navbar/logo-perusahaan.png" alt=""></div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse me-5" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link active small" aria-current="page" href="home.html">HOME</a>
@@ -73,28 +73,33 @@
 
         <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="tab" onclick="switchTab('rates');"><i
-                        class="fas fa-calculator"></i>
-                    Rates</a>
+                <a class="nav-link active" data-bs-toggle="tab" onclick="switchTab('rates');">
+                    <i class="fas fa-calculator"></i>
+                    <span class="tab-text">Rates</span>
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" onclick="switchTab('tracking');"><i
-                        class="fas fa-map-marker-alt"></i>
-                    Tracking</a>
+                <a class="nav-link" data-bs-toggle="tab" onclick="switchTab('tracking');">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="tab-text">Tracking</span>
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" onclick="switchTab('schedule');"><i
-                        class="fas fa-calendar-alt"></i>
-                    Schedule</a>
+                <a class="nav-link" data-bs-toggle="tab" onclick="switchTab('schedule');">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span class="tab-text">Schedule</span>
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" onclick="switchTab('quote');"><i class="fas fa-quote-left"></i>
-                    Get a Quote</a>
+                <a class="nav-link" data-bs-toggle="tab" onclick="switchTab('quote');">
+                    <i class="fas fa-quote-left"></i>
+                    <span class="tab-text">Get a Quote</span>
+                </a>
             </li>
         </ul>
 
         <!-- Tab panes -->
-        <div class="tab-content px-3 py-3">
+        <div class="tab-content">
             <!-- Rates -->
             <div id="rates" class="content-section tab-pane active">
                 <h1 class="m-0"><strong>Get Instant Rates in a few steps</strong></h1>
@@ -136,12 +141,14 @@
                                     <option value="Normal">Normal</option>
                                     <option value="By Sea">By Sea</option>
                                 </select></div>
-                            <div class="col-lg-1">
-                                <button class="rates-btn float-end" style="margin-top: 30px"
-                                        onclick="rates2(event, 'rates2')"><i
-                                        class="fas fa-search"></i>
+                            <div class="col-lg-1 col-12">
+                                <button class="rates-btn w-100 d-flex justify-content-center align-items-center" style="margin-top: 30px"
+                                        onclick="rates2(event, 'rates2')">
+                                    <i class="fas fa-search"></i>
+                                    <span class="ms-2 d-sm-block d-md-none">Search</span>
                                 </button>
                             </div>
+
                         </div>
                     </div>
 
@@ -2309,7 +2316,7 @@
 <div class="services-container">
     <div class="services-content">
         <h1>Our Services</h1>
-        <div class="services-text mb-5">
+        <div class="services-text">
 
             <div class="col-lg-9 ">
                 <p>With the rapid advancement of technology and the rise of digitalization across all sectors,
@@ -2571,11 +2578,14 @@
 
 <!-- subcribe -->
 <section class="subscribe align-items-center">
-    <div id="subr1" class="subs-content active align-items-center px-3 ">
+    <div id="subr1" class="subs-content align-items-center">
         <h2>Subscribe to Our Newsletter</h2>
-        <p>Always get the latest news delivered straight to your inbox.</p>
-        <input class="mt-0" type="email" placeholder="Enter your email" style="width: 400px;"/>
-        <button onclick="subrs('subr2')">Subscribe</button>
+        <p>Always get the latest news<br>delivered straight to your inbox.</p>
+        <div class="form-group-subscribe">
+                <input type="text" class="form-control" placeholder="Email">
+            <button class="btn btn-success" type="button" id="">Subscribe</button>
+        </div>
+
     </div>
     <!--    <div id="subr2" class="subs-content ">-->
     <!--        <img src="assets\images\home\Subscribe-Success.png" alt="">-->
