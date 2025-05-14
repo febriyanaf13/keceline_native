@@ -45,17 +45,6 @@ header nav ul li a {
     font-size: 0.9rem;
 }
 
-.vl {
-    border-left: 1px solid #7b7b7b;
-    margin-left: 25vw;
-    height: 2rem;
-}
-
-.login {
-    color: #7b7b7b;
-    text-decoration: none;
-}
-
 .navbar {
     display: flex;
     justify-content: left;
@@ -67,6 +56,13 @@ header nav ul li a {
     background: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+.navbar-collapse {
+    margin-left: 100px;
+    align-items: end;
+    text-align: end;
+}
+
 
 .logo {
     background: var(--green-color);
@@ -100,7 +96,6 @@ header nav ul li a {
 }
 
 
-
 .nav-links a, .login-btn {
     text-decoration: none;
     color: var(--grey-color);
@@ -120,15 +115,16 @@ header nav ul li a {
 .nav-tabs .nav-link:focus {
     color: black; /* biar gak berubah jadi biru saat dihover */
 }
+
 .nav-tabs .nav-item {
     border-right: 1px solid #dee2e6;
 }
 
 /* Agar tampilan lebih rapi, bisa tambahkan padding */
 .nav-tabs .nav-link {
-    padding: 15px 50px;  /* Menambahkan padding vertikal 15px dan horizontal 30px */
-    min-width: 150px;    /* Menetapkan lebar minimum kolom */
-    text-align: center;  /* Memastikan teks berada di tengah */
+    padding: 15px 50px; /* Menambahkan padding vertikal 15px dan horizontal 30px */
+    min-width: 150px; /* Menetapkan lebar minimum kolom */
+    text-align: center; /* Memastikan teks berada di tengah */
 
 }
 
@@ -150,7 +146,6 @@ header nav ul li a {
 .nav-tabs .nav-link.active:focus {
     color: green !important; /* jaga-jaga kalau aktif dan dihover */
 }
-
 
 
 .nav-tabs .nav-link i {
@@ -177,6 +172,7 @@ header nav ul li a {
     cursor: pointer;
     font-weight: 400;
 }
+
 .background {
     background-image: url('../assets/images/about/industrial.jpg');
     background-size: cover;
@@ -187,7 +183,7 @@ header nav ul li a {
     position: relative;
 }
 
-.container-head {
+.background .container-head {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 3vw;
     text-align: left;
@@ -198,14 +194,14 @@ header nav ul li a {
     width: 50%;
     top: 30%;
     /*margin-right: 20vw;*/
-    max-width: 70%;
+    /*max-width: 70%;*/
 
 
 }
 
 
 .container-head h1 {
-    font-size: clamp(3rem, 4vw, 5rem);
+    font-size: clamp(1.8rem, 4vw, 5rem);
     margin-bottom: 10px;
     text-align: left;
     padding-left: 4vh;
@@ -214,7 +210,8 @@ header nav ul li a {
 .container-head p {
     text-align: left;
     padding-left: 4vh;
-    font-size: clamp(1rem, 1vw, 3rem);
+    font-size: clamp(0.9rem, 1vw, 3rem);
+    font-weight: lighter;
 
 }
 
@@ -231,8 +228,8 @@ header nav ul li a {
     padding: 4vh;
 }
 
-.background-2 p{
-    font-size: clamp(60px, 3vw, 70px);
+.background-2 p {
+    font-size: clamp(2.5rem, 3vw, 70px);
     color: black;
     padding-left: 5vh;
     font-weight: normal;
@@ -240,7 +237,7 @@ header nav ul li a {
 
 
 .desc {
-    font-size: 3vh;
+    font-size: clamp(1rem, 3vw, 30px);
     text-align: justify;
     color: black;
     font-weight: lighter;
@@ -254,7 +251,7 @@ header nav ul li a {
     /*position: absolute;
     top:90%;*/
     top: auto;
-    height: 70vh;
+    height: 55vh;
     /*width: 100%;*/
 }
 
@@ -302,14 +299,6 @@ header nav ul li a {
     /*height: 70vh;*/
     align-items: center;
 
-}
-
-
-.background-2 p{
-    font-size: clamp(60px, 3vw, 70px);
-    color: black;
-    padding-left: 5vh;
-    font-weight: lighter;
 }
 
 
@@ -400,17 +389,18 @@ header nav ul li a {
     color: black;
 }
 
-.certifications{
+.certifications {
     background-color: #e8e8e8;
     padding-bottom: 100px;
     padding-top: 100px;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
 }
+
 .certification-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 kolom */
-    grid-template-rows: repeat(2, auto);   /* 3 baris */
+    grid-template-rows: repeat(2, auto); /* 3 baris */
     gap: 50px 70px;
     padding-left: 5vw;
     padding-right: 5vw;
@@ -435,10 +425,9 @@ header nav ul li a {
 
 .certification-card p {
     margin: 0;
-    font-size: clamp(40px, 1.7vw, 50px);
+    font-size: clamp(20px, 1.7vw, 50px);
     font-weight: 500;
 }
-
 
 
 .lis-putih {
@@ -567,7 +556,6 @@ header nav ul li a {
 }
 
 
-
 .footer-social {
     display: flex;
     /*align-items: center;*/
@@ -609,4 +597,176 @@ header nav ul li a {
 .floating-button i {
     color: white;
     font-size: 24px;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 50px;
+    }
+
+    .navbar-toggler {
+        padding: 0.25rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 16px; /* Lebih besar di layar kecil untuk kemudahan sentuh */
+    }
+
+
+    .search-container {
+        padding: 2vh;
+    }
+
+    .nav-tabs {
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .nav-tabs .nav-item {
+        flex: 1 1 auto;
+    }
+
+    .nav-tabs .nav-link {
+        padding: 15px 10px;
+    }
+
+    .nav-tabs .nav-link i {
+        font-size: 1.5rem;
+    }
+
+    .nav-tabs .nav-link .tab-text {
+        display: none; /* Sembunyikan teks pada layar mobile */
+    }
+
+    .nav-tabs .nav-link.active {
+        background-color: rgba(21, 66, 3, 0.05);
+    }
+
+    .nav-tabs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        overflow: hidden;
+        white-space: nowrap;
+        border-bottom: 1px solid #dee2e6;
+        max-width: 100%;
+    }
+
+    .nav-tabs .nav-item {
+        flex: 1;
+        border-right: none;
+    }
+
+    .nav-tabs .nav-link {
+        min-width: auto;
+        padding: 15px 10px;
+    }
+
+    .nav-tabs .nav-link i {
+        font-size: 1.5rem;
+    }
+
+    .nav-tabs .nav-link .tab-text {
+        display: none;
+    }
+
+
+    .nav-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    .nav-tabs .nav-item {
+        flex: 0 0 auto;
+    }
+
+    .nav-tabs .nav-link {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    /*container head*/
+    .background {
+        height: 35vh;
+
+    }
+
+    .background .container-head {
+        width: 90%;
+        border-radius: 0 10px 10px 0;
+        padding: 1.5rem;
+        top: 30%;
+
+    }
+
+    .container-head h1 {
+        margin-bottom: 10px;
+        padding-left: 0;
+    }
+
+    .container-head p {
+
+        padding-left: 0;
+
+
+    }
+    .background-2 p {
+        padding-left: 0;
+    }
+    .wh-box {
+        height: 55vh;
+    }
+
+    .img-box-wh {
+
+        padding: 0;
+        width: 100%; /* Pastikan lebar penuh */
+        height: auto;
+    }
+
+
+    .certification-grid {
+        display: flex; /* Ubah menjadi Flexbox */
+        flex-direction: column; /* Susunan vertikal ke bawah */
+        gap: 50px; /* Jarak antar elemen */
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .certification-card img {
+        width: 70px;
+        height: 70px;
+    }
+
+
+    /* Stack form elements */
+    .row [class*="col-"] {
+        margin-bottom: 15px;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer h4 {
+        margin-top: 25px;
+    }
+
+    .terms, .footer-social {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .rates-btn {
+        margin-top: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .rates-btn span {
+        display: inline;
+    }
+
+
 }
