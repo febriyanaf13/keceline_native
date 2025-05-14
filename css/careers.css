@@ -385,28 +385,30 @@ header nav ul li a {
 
 /* Container styling */
 .benefit-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between each card */
-    padding: 20px;
-    flex-wrap: wrap;
-    max-width: 100%;
+    display: flex; /* Menggunakan Flexbox */
+    flex-wrap: wrap; /* Elemen dapat berpindah ke baris berikutnya jika ruang tidak cukup */
+    justify-content: center; /* Elemen rata tengah */
+    gap: 20px; /* Jarak antar elemen */
 }
 
-/* Card styling */
 .benefit-card {
-    background-color: #fff;
-    padding: 50px;
-    border-radius: 10px;
-    width: 400px; /* Width of each card */
-    height: 500px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
+    display: flex; /* Aktifkan Flexbox untuk tata letak */
+    flex: 1 1 calc(25% - 20px); /* Setiap kartu menggunakan 25% lebar dengan jarak */
+    max-width: calc(25% - 20px); /* Maksimal lebar setiap kartu */
+    min-height: 600px;
+    flex-direction: column; /* Mengatur elemen di dalam secara vertikal */
+    align-items: center; /* Pusatkan elemen secara horizontal */
+    text-align: center; /* Teks di dalam berada di tengah */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Opsional: Tambahkan bayangan */
+    padding: 3vw; /* Tambahkan ruang di dalam kartu */
+    border-radius: 8px; /* Tambahkan sudut melengkung */
+    transition: transform 0.3s ease; /* Transisi saat hover (opsional) */
+    position: relative; /* Pastikan properti posisi relatif diterapkan */
+    box-sizing: border-box; /* Pastikan padding dihitung di dalam dimensi elemen */
+    justify-content: center;
+
 }
+
 
 /* Icon styling */
 .benefit-icon {
